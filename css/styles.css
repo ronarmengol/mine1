@@ -10144,7 +10144,7 @@ header.masthead {
   /* background-image: url("../assets/img/truck-bg.jpg"); */
   background-image: url(https://media.giphy.com/media/YOAqV6wRGOEVM48svy/giphy.gif);
   background-repeat: no-repeat;
-  background-attachment: scroll;
+  background-attachment: fixed;
   background-position: center;
   background-size: cover;
   height: 100vh;
@@ -10449,9 +10449,11 @@ header.masthead .masthead-heading {
 
 section#contact {
   background-color: #212529;
-  background-image: url("../assets/img/map-image.png");
+  /* background-image: url("../assets/img/map-image.png"); */
+  background-image: url(../assets/img/virtual-reality.gif);
   background-repeat: no-repeat;
   background-position: center;
+  height: 100vh;
 }
 section#contact .section-heading {
   color: #fff;
@@ -10552,4 +10554,54 @@ section#contact form#contactForm :-ms-input-placeholder {
 .kenburns-bottom {
   -webkit-animation: kenburns-bottom 5s ease-out both;
           animation: kenburns-bottom 5s ease-out both;
+}
+
+.opaque {
+  opacity: 0.4;
+}
+
+.neon::before {
+  position: absolute;
+  background-color: #ffee10;
+  transition: 6s;
+  transform: scale(1.5);
+  z-index: -1;
+  display: inline;
+  top: 70vh;
+  left: 50%;
+}
+
+
+.neon:hover{
+  color: #fed136;
+  text-shadow: 0 0 5px #fed136;
+  opacity: 1;
+  border-color: #fed136;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #fed136;
+  border-color: #fed136;
+}
+.btn-primary:hover {
+  color: #fff;
+  background-color: #fec810;
+  border-color: #fec503;
+}
+
+.bg1 {
+  /* background-image: url(https://media.giphy.com/media/14hS1ZEmSfKdTW/giphy.gif);
+  background-repeat: repeat-y; */
+  background-attachment: scroll;
+  background-size: cover;
+  background-position: right;
+}
+
+.bg2 {
+  background-image: url(../assets/img/virtual-reality.gif);
+  /* background-repeat: repeat-y; */
+  background-attachment: scroll;
+  background-size: cover;
+  background-position: right;
 }
