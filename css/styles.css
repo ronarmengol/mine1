@@ -10141,11 +10141,13 @@ header.masthead {
   padding-bottom: 8rem;
   text-align: center;
   color: #fff;
-  background-image: url("../assets/img/truck-bg.jpg");
+  /* background-image: url("../assets/img/truck-bg.jpg"); */
+  background-image: url(https://media.giphy.com/media/YOAqV6wRGOEVM48svy/giphy.gif);
   background-repeat: no-repeat;
   background-attachment: scroll;
-  background-position: center center;
+  background-position: center;
   background-size: cover;
+  height: 100vh;
 }
 header.masthead .masthead-subheading {
   font-size: 1.5rem;
