@@ -10647,3 +10647,8 @@ strong {
 .article2 > p {
   opacity: 0.6;
 }
+
+.mrg1 {
+  margin-bottom: 200px;
+  border: 1px solid gray;
+}
