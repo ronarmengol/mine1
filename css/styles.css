@@ -10571,9 +10571,6 @@ section#contact form#contactForm :-ms-input-placeholder {
   left: 50%;
 }
 
-
-
-
 .neon:hover{
   color: #fed136;
   text-shadow: 0 0 5px #fed136;
@@ -10612,7 +10609,7 @@ section#contact form#contactForm :-ms-input-placeholder {
   min-width: 70%;
   padding: 10px 20px;
   background-color: white;
-  margin-top: 10rem;
+  margin-top: 1rem;
   
 }
 
