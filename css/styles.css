@@ -10682,7 +10682,7 @@ strong {
 .spinner {
   width: 40px;
   height: 40px;
-  background-color: gray; 
+  background-color: chartreuse; 
 
   margin: 100px auto;
   -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
