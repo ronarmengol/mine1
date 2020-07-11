@@ -10671,6 +10671,8 @@ strong {
   background-repeat: no-repeat;
   background-size: cover;
   color: aliceblue;
+  margin-bottom: 100px;
+  padding: 100px auto 100px;
 }
 .table {
   background-color: aliceblue;
