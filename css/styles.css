@@ -10666,6 +10666,17 @@ strong {
   margin-bottom: 20px;
 }
 
+.bg {
+  background-image: url("../assets/img/entrepreneur-1340649_1920.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: aliceblue;
+}
+.table {
+  background-color: aliceblue;
+  opacity: 0.7;
+}
+
 #preloader {
   position: fixed;
   left: 0;
