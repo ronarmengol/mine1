@@ -1,12 +1,13 @@
 {
   "short_name": "ron",
-  "name": "ronarmengoh",
+  "name": "ronarmengo1",
   "icons": [{
-    "src": "./assets/img/zambiaflag.png",
+    "src": "/assets/img/zambiaflag.png",
     "type": "image/png",
     "sizes": "192x192"
   }],
   "start_url": "/",
+  "display": "standalone",
   "background_color": "#fafafa",
   "theme_color": "#fafafa"
 }
