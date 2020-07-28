@@ -10141,8 +10141,8 @@ header.masthead {
   padding-bottom: 8rem;
   text-align: center;
   color: #fff;
-  /* background-image: url("../assets/img/truck-bg.jpg"); */
-  background-image: url(https://media.giphy.com/media/GC7C2Fi902BDG/giphy.gif);
+  /* background-image: url(https://media.giphy.com/media/GC7C2Fi902BDG/giphy.gif); */
+  background-image: url(../assets/img/kitwe-marketing-bg.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
