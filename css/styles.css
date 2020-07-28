@@ -10670,11 +10670,13 @@ strong {
 
 .bg {
   background-image: url("../assets/img/marketing.jpg");
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   color: aliceblue;
   margin-bottom: 100px;
   padding: 100px auto 100px;
+  min-height: 100vh;
 }
 .table {
   background-color: aliceblue;
