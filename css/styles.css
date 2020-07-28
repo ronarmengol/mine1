@@ -10561,6 +10561,10 @@ section#contact form#contactForm :-ms-input-placeholder {
   opacity: 0.7;
 }
 
+.comments {
+  margin-top: 1.5rem;
+  text-align: left;
+}
 .neon::before {
   position: absolute;
   background-color: #ffee10;
@@ -10599,8 +10603,7 @@ section#contact form#contactForm :-ms-input-placeholder {
 }
 
 .bg2 {
-  background-image: url(../assets/img/virtual-reality.gif);
-  /* background-repeat: repeat-y; */
+  background-image: url(../assets/img/web-design4.jpg);
   background-attachment: scroll;
   background-size: cover;
   background-position: right;
