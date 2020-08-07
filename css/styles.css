@@ -10683,13 +10683,13 @@ strong {
 
 @media(max-width: 480px) {
   .blog {
-    background-image: url(../assets/img/wood1s.jpg);
+    background-image: url(../assets/img/buildersm.jpg);
   }
 
 }
 @media(min-width: 481px) {
   .blog {
-    background-image: url(../assets/img/wood1.jpeg);
+    background-image: url(../assets/img/builder.jpeg);
   }
 }
 
@@ -10698,7 +10698,6 @@ strong {
 }
 
 .bg {
-  background-image: url("../assets/img/marketing.jpeg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -10706,6 +10705,19 @@ strong {
   margin-bottom: 100px;
   padding: 100px auto 100px;
   min-height: 100vh;
+}
+
+
+@media(max-width: 480px) {
+  .bg {
+    background-image: url(../assets/img/marketings.jpg);
+  }
+
+}
+@media(min-width: 481px) {
+  .bg {
+    background-image: url(../assets/img/marketing.jpeg);
+  }
 }
 .table {
   background-color: aliceblue;
