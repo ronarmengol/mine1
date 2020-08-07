@@ -10681,6 +10681,18 @@ strong {
 
 }
 
+@media(max-width: 480px) {
+  .blog {
+    background-image: url(../assets/img/wood1s.jpg);
+  }
+
+}
+@media(min-width: 481px) {
+  .blog {
+    background-image: url(../assets/img/wood1.jpeg);
+  }
+}
+
 .snippet h1{ 
   margin-bottom: 20px;
 }
