@@ -10142,13 +10142,26 @@ header.masthead {
   text-align: center;
   color: #fff;
   /* background-image: url(https://media.giphy.com/media/GC7C2Fi902BDG/giphy.gif); */
-  background-image: url(../assets/img/kitwe-marketing-bg.jpeg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
   height: 100vh;
 }
+
+@media(max-width: 480px) {
+  header.masthead {
+    background-image: url(../assets/img/kitwe-marketing-bgs.jpg);
+  }
+
+}
+@media(min-width: 481px) {
+  header.masthead {
+    background-image: url(../assets/img/kitwe-marketing-bg.jpeg);
+  }
+}
+
+
 header.masthead .masthead-subheading {
   font-size: 1.5rem;
   font-style: italic;
