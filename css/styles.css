@@ -10616,7 +10616,6 @@ section#contact form#contactForm :-ms-input-placeholder {
 }
 
 .bg2 {
-  background-image: url(../assets/img/web-design4.jpg);
   background-attachment: scroll;
   background-size: cover;
   background-position: right;
@@ -10624,6 +10623,17 @@ section#contact form#contactForm :-ms-input-placeholder {
   margin-top: 5rem;
 }
 
+@media(max-width: 480px) {
+  .bg2 {
+    background-image: url(../assets/img/web-design4s.jpg);
+  }
+
+}
+@media(min-width: 481px) {
+  .bg2 {
+    background-image: url(../assets/img/web-design4.jpeg);
+  }
+}
 .article1 {
   min-width: 70%;
   padding: 10px 20px;
