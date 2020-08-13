@@ -99,9 +99,16 @@
     type="text/css"
     />
     <!-- Font Awesome icons (free version)-->
-    <script
+    <script>
+      window.addEventListener('load', function () {
+        const script = document.createElement("script");
+        script.src='https://use.fontawesome.com/releases/v5.13.0/js/all.js';
+        document.body.appendChild(script);
+      });
+    </script>
+    <!-- <script
       src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"
-      crossorigin="anonymous" defer></script>
+      crossorigin="anonymous" defer></script> -->
 
     
       <link rel="prerender" href="./contact.html" as="document">
