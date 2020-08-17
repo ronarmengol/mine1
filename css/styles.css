@@ -7370,11 +7370,12 @@ button.bg-dark:focus {
 }
 
 .fixed-top {
-  position: fixed;
+  /* position: fixed; */
+  position: absolute;
   top: 0;
   right: 0;
   left: 0;
-  z-index: 1030;
+  /* z-index: 1030; */
 }
 
 .fixed-bottom {
