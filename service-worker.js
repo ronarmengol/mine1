@@ -10,6 +10,15 @@
 //     console.log('Inside the fetch handler:', event);
 //   });
 
+
+
+
+
+
+
+
+
+
 let CACHE_NAME = 'sw-v1'
 self.addEventListener('install', (event) => {
   event.waitUntil(
