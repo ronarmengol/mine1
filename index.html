@@ -97,6 +97,14 @@
      <!-- <script src="js/scripts.js" defer></script>
      -->
 
+     <script type="module" defer>
+      import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+      
+      const el = document.createElement('pwa-update');
+      document.body.appendChild(el);
+      
+      </script>
+
        <!-- Google fonts-->
      <!-- <link 
     href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
@@ -494,20 +502,8 @@
     </footer>
 
 
-<!-- 
-    <script>
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/service-worker.js')
-      }
-    </script> -->
 
-    <script type="module">
-      import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
-      
-      const el = document.createElement('pwa-update');
-      document.body.appendChild(el);
-      
-      </script>
+    
 
   </body>
 </html>
