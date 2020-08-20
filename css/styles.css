@@ -10701,7 +10701,6 @@ strong {
 }
 
 
-
 @media(max-width: 480px) {
   .blog {
     background-image: url(../assets/img/buildersm.jpg);
@@ -10803,4 +10802,8 @@ strong {
 
 .intro {
   max-width: 700px;
+}
+
+.headingColor {
+  color: blue;
 }
