@@ -10681,6 +10681,7 @@ strong {
   opacity: 0.9;
 }
 
+
 .mrg1 {
   margin-bottom: 200px;
   border: 1px solid gray;
@@ -10690,10 +10691,16 @@ strong {
   background-image: url(../assets/img/wood1.jpeg);
   background-repeat: repeat-y;
   width: 100%;
-  height: 50%;
-  top: 65px;
+  height: auto;
+  padding: 2rem;
 
 }
+
+.article2 > h1 {
+  padding-top: 3rem;
+}
+
+
 
 @media(max-width: 480px) {
   .blog {
@@ -10786,3 +10793,14 @@ strong {
   }
 }
 
+.mainindex {
+  text-align: left;
+}
+
+.mainindex p {
+  color: blue;
+}
+
+.intro {
+  max-width: 700px;
+}
