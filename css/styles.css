@@ -10760,6 +10760,8 @@ strong {
 
 .box1 {
   box-shadow: 3px 3px 2px 0px rgba(120, 104, 87, 1),0px -3px 24px -4px rgba(62, 39, 8, 0.6);
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 
