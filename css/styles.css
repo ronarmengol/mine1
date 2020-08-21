@@ -10730,13 +10730,13 @@ strong {
 
 @media(max-width: 480px) {
   .bg {
-    background-image: url(../assets/img/marketings.jpg);
+    background-image: url(../assets/img/web-designer-small.jpg);
   }
 
 }
 @media(min-width: 481px) {
   .bg {
-    background-image: url(../assets/img/marketing.jpeg);
+    background-image: url(../assets/img/web-designer-large.jpeg);
   }
 }
 .table {
