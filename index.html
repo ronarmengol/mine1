@@ -64,7 +64,14 @@
       <link rel="preload" href="css/styles.css" as="style">
       <link rel="stylesheet" href="css/styles.css" media="print" onload="this.media='all'">
       
-      
+      <script type="module" defer>
+        
+        import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+        
+        const el = document.createElement('pwa-update');
+        document.body.appendChild(el);
+        
+        </script>
       <!-- <script>
         window.addEventListener('load', function () {
         const script = document.createElement("script");
@@ -106,14 +113,7 @@
       
       <!-- <script defer type="module" src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall@latest/dist/pwa-install.min.js"></script> -->
       
-      <script type="module" defer>
-        
-      import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
-      
-      const el = document.createElement('pwa-update');
-      document.body.appendChild(el);
-      
-      </script>
+     
 
 <script src="./js/scripts.js"></script>
 <!-- Google fonts-->
