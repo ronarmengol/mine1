@@ -36,12 +36,12 @@
     <meta name="robots" content="index, follow" />
     <link rel="apple-touch-icon" href="favicon.ico">
     <link rel="sitemap" type="application/xml" title="Sitemap" href="./sitemap.xml" />
-
+    
     
     <title>
       Web designer in Kitwe Copperbelt Zambia developer builder
     </title>
-
+    
     
     
     <meta property="og:title" content="how to make a website" />
@@ -60,14 +60,17 @@
     <link rel="preload" href="./assets/img/kitwe-marketing-bg.jpeg" as="image">
     <link rel="preload" href="./assets/img/kitwe-marketing-bgs.jpg" as="image">
     
+    
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="stylesheet" href="css/styles.css" media="print" onload="this.media='all'">
+    
+
+    <script src="js/scripts.js" defer></script>
+    
+    <script type="module" defer>
       
-      <link rel="stylesheet" href="/css/styles.css">
-      <link rel="preload" href="css/styles.css" as="style">
-      <link rel="stylesheet" href="css/styles.css" media="print" onload="this.media='all'">
-      
-      <script type="module" defer>
-        
-        import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+      import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
         
         const el = document.createElement('pwa-update');
         document.body.appendChild(el);
@@ -111,7 +114,6 @@
          document.body.appendChild(script);
         });
       </script> -->
-      <script src="js/scripts.js" defer></script>
       
       <!-- <script defer type="module" src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall@latest/dist/pwa-install.min.js"></script> -->
       
