@@ -10799,3 +10799,16 @@ p {
   border-radius: 25px;
 }
 
+p a {
+  color: blue;
+
+}
+
+p a:hover {
+  color: red;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
