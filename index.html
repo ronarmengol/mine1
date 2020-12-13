@@ -1,16 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="css/styles.css">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <!-- shrink-to-fit=no -->
     
     
-    <link rel="preconnect" href="https://use.fontawesome.com" crossorigin="anonymous"/>
-    <link rel="preconnect" href="https://stackpath.bootstrapcdn.com" crossorigin="anonymous" />
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous" />
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" crossorigin="anonymous" />
     <link rel="preconnect" href="https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate" crossorigin="anonymous" />
     
     
@@ -42,7 +36,291 @@
       Web design designer Zambia Kitwe Copperbelt developer SEO builder
     </title>
     
+    <style>
+body::-webkit-scrollbar {
+  width: 20px;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+  background-color: #e1f5fe;
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background: #4fc3f7; 
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #01579b; 
+}
+
+:root {
+  --dark-blue: #1a237e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.none {
+  display: none;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+header {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    /* background: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header > picture {
+    width: 100%;   
+    height: 100%;
+    position: absolute;
+    top: 0;
+    opacity: 1;
+    z-index: -1;
+
+}
+
+header > picture > img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+  
+  header > img {
+    position: relative;
+    width: 25vw;
+    height: auto;
+    min-width: 180px;
+    margin-right: 2vw;
+    top: -8vw;
     
+  }
+
+header > div {
+    color: black;
+    background-color: rgba(255,255,255,0.7);
+    padding: calc(2vw) calc(5vw);
+    border-radius: 20px;
+    border: 1px solid blue;
+}
+
+header > div > h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
+    font-size: clamp(2rem, 5vw, 6rem);
+}
+header > div > h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    font-size: clamp(1.0rem, 3vw, 2rem);
+    color: #1a237e;
+}
+
+header + span {
+  font-size: 0.7rem;
+}
+
+
+section.intro1 {
+  position: relative;
+  
+}
+section.intro1 > div:nth-of-type(1) {
+  overflow-x: hidden;
+  position: absolute;
+  background-color: #fff176;
+  border-radius: 50%;
+  width: 80%;
+  max-width: 600px;
+  height: 90%;
+  opacity: 0.1;
+  z-index: -1;
+  top: -5vw;
+  left: 10%;
+  transform: translateX(-50%);
+  animation: zoom 8s infinite linear;
+
+}
+
+
+
+@keyframes zoom {
+  from {
+    transform: scale(0.1);
+    opacity: 0.3;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+section.intro1 > h2 {
+  font-size: clamp(5rem, 15vw, 8rem);
+  margin: 5rem auto;
+  width: 90%;
+  max-width: 700px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+
+section.intro1 > h3 {
+  text-align: center;
+  font-size: clamp(1.2rem, 4vw, 2.5rem);
+  color: var(--dark-blue);
+  font-weight: 400;
+  margin-bottom: 8vw;
+}
+
+section.intro2 {
+      display: flex;
+      margin: 0 0 5rem 0;
+      background-color: #010936;
+      padding: 1rem 0;
+  }
+
+section.intro2 img{
+    max-width: 400px;
+    width: 100%;
+  }
+
+section.intro2 h4{
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+  }
+
+section.intro2 article {
+      color: #f1f1f1;
+      padding: 0 1rem 0 1rem;
+  }
+
+section.intro2 p {
+      max-width: 800px;
+      line-height: 1.5rem;
+      font-size: 1.1rem;
+  }
+
+  .section2 {
+            display: flex;
+            justify-content: space-evenly;
+            border: 1px solid #eceff1;
+            padding: 0 0 1rem 0;
+
+        }
+
+        .section2 img {
+            width: 45%;
+            max-width: 500px;
+            align-self: start;
+
+            
+        }
+
+        .section2 .articles1 {
+            padding: 0 0 0 2rem;
+            background-color: rgba(240, 244, 247, 0.1);
+        }
+
+        .section2 h2 {
+            padding: 1rem 0 0 0;
+            font-size: 3rem;
+        }
+
+        .section2 h3 {
+            text-transform: uppercase;
+            font-family: monospace;
+            font-weight: 800;
+            font-size: 1.8rem;
+            letter-spacing: 3px;
+        }
+
+        .section2 h3:nth-of-type(1) {
+            margin: 2rem 0 0 0;
+        }
+
+        .section2 p {
+            max-width: 700px;
+            transition: 0.5s;
+            opacity: 0.8;
+            line-height: 1.5rem;
+            
+        }
+
+        .section2 p:hover {
+            opacity: 1;
+            color: #303f9f;
+            font-size: 1.2rem;
+        }
+
+
+@media screen and (max-width: 800px) {
+    header {
+        flex-direction: column;
+    }
+
+    header > div {
+      position: relative;
+      top: 5%;
+    }
+
+    header > img {
+        top: -8%;
+        transform: scaleX(-1);
+
+    }
+
+    section.intro2 {
+                flex-direction: column;
+            }
+            
+    section.intro2 aside {
+        background-color: #010936;
+        text-align: center;
+    }
+    
+    section.intro2 img {
+        max-width: 500px;
+    }
+
+            
+    .section2 {
+        flex-direction: column;
+    }
+
+    .section2 img {
+        margin: 0 auto;
+        width: 100%;
+    }
+  }
+
+
+
+
+
+    </style>
+
+<link rel="preload" href="./css/styles.css" as="style" onload="this.rel='stylesheet'">
+
+
+
     <meta property="og:title" content="how to make a website" />
     <meta property="og:url" content="https://ronarmengol1.netlify.app/index.html" />
     <meta property="og:image" content="https://ronarmengol1.netlify.app/assets/img/web-designer-small.jpg" />
@@ -56,96 +334,21 @@
     
     <link rel="icon" type="image/ico" href="./favicon.ico" />
     
-    <link rel="preload" href="./assets/img/kitwe-marketing-bg.jpeg" as="image">
-    <link rel="preload" href="./assets/img/kitwe-marketing-bgs.jpg" as="image">
     
     
-   
-    <!-- <link rel="preload" href="css/styles.css" as="style">
-    <link rel="stylesheet" href="css/styles.css" media="print" onload="this.media='all'"> -->
 
-    <script type="module" >
+    <!-- <script type="module" >
       
       import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
         
         const el = document.createElement('pwa-update');
         document.body.appendChild(el);
         
-        </script>
-      <!-- <script>
-        window.addEventListener('load', function () {
-        const script = document.createElement("script");
-        script.src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js';
-        document.body.appendChild(script);
-      });
     </script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    
-    <script>
-      window.addEventListener('load', function () {
-        const script = document.createElement("script");
-        script.src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js';
-        document.body.appendChild(script);
-      });
-    </script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" defer ></script> -->
-    <!-- Bootstrap core JS-->
-    <script>
-      window.addEventListener('load', function () {
-        const script = document.createElement("script");
-        script.src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js';
-        document.body.appendChild(script);
-      });
-      </script>
-     <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" defer></script> -->
-     <!-- Third party plugin JS-->
-     
-     
-     <!-- <script>
-       window.addEventListener('load', function () {
-         const script = document.createElement("script");
-         script.src='js/scripts.js';
-         document.body.appendChild(script);
-        });
-      </script> -->
-      
-
-    
-      <!-- <script defer type="module" src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall@latest/dist/pwa-install.min.js"></script> -->
-      
-     
-
-<!-- Google fonts-->
-<!-- <link 
-  href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
-  rel="stylesheet"
-  type="text/css"
-  />  -->
-  <!-- <link 
-    href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic"
-    rel="stylesheet"
-    type="text/css"
-    /> -->
-    <!-- <link 
-      href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700"
-      rel="stylesheet"
-    type="text/css"
-    />  -->
-    <!-- Font Awesome icons (free version)-->
-    <!-- <script>
-      window.addEventListener('load', function () {
-        const script = document.createElement("script");
-        script.src='https://use.fontawesome.com/releases/v5.13.0/js/all.js';
-        document.body.appendChild(script);
-      });
-    </script> -->
-    <!-- <script
-      src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"
-      crossorigin="anonymous" defer></script> -->
 
 
-      <link rel="preconnect" href="https://ronarmengol1.netlify.app/contact.html" />
-      <link rel="preconnect" href="https://ronarmengol1.netlify.app/blog/blogindex.html" />
+      <!-- <link rel="preconnect" href="https://ronarmengol1.netlify.app/contact.html" />
+      <link rel="preconnect" href="https://ronarmengol1.netlify.app/blog/blogindex.html" /> -->
 
       <script type="application/ld+json">
         {
@@ -162,133 +365,84 @@
         </script>
 
   </head>
-
-  <body id="page-top">
-    <!-- Preloader -->
-    <!-- <div id="preloader">
-      <div class="spinner"></div>
-    </div> -->
-
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="opacity: 0.9;" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top"
-          >RonArmengol</a
-        ><button
-          class="navbar-toggler navbar-toggler-right"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarResponsive"
-          aria-controls="navbarResponsive"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          Menu<i class="fas fa-bars ml-1"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav text-uppercase ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger active" title="main web page" href="./index.html"
-                >Home</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link js-scroll-trigger"
-                href="./blogs/blogindex.html"
-                title="blog index page"
-                >Articles</a
-              >
-            </li>
-            <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">Team</a></li> -->
-            <li class="nav-item">
-              <a 
-              class="nav-link js-scroll-trigger" href="./contact.html" title="contact page">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <!-- Masthead-->
-    <header class="masthead">
-      <div class="container">
-        <!-- <div class="masthead-subheading">Welcome</div> -->
-        <!-- <div class="masthead-heading">It's Nice To Meet You</div> -->
-        <!-- <a class="btn neon btn-xl text-uppercase js-scroll-trigger"
-          href="#services"
-          >Tell Me More</a> -->
+  <body>
+    <header>
+      <picture>
+          <source media="(min-width:700px)" srcset="./assets/img/website-lg.jpg">
+              <img 
+                  width="500px"
+                  height="728px"
+                  loading="lazy"
+                  src="assets/img/website-sm.jpg" alt="building">
+      </picture>
+      <img 
+        loading="lazy"
+        width="500px"
+        height="500px"
+        src="./assets/img/zambia-eagle.png" alt="">
+      <div>
+          <h1>Web designer <span class="none">seo web designer developer Zambia design</span></h1>
+          <h2>Kitwe Zambia</h2>
       </div>
     </header>
+    <span>
+      Photo by Chris Schippers from Pexels
+    </span>
 
-    <!-- Services-->
+    <main>
+      <section class="intro1">
+        <div></div>
+        <div></div>
+        <h2>Move into the future go online <span class="none">seo web designer developer Zambia design</span></h2>
+        <h3>Make your business <span id="heading1">visible</span></h3>
+      </section>
 
-    <section class="page-section" id="services">
-      <div class="container">
-        <div class="text-center">
-            <h1 class="section-heading text-uppercase">
-              Web developer in Zambia
-            </h1>
-          <h3 style="font-size: 1.5rem; font-weight: 500; opacity: 0.8;">
-            Hi, I am Ron: </h3>
-        </div>
-        <div class="row">
-          <div class="col-lg-8 intro">
-
-            <p>I am currently residing in <i><em>Copperbelt, Kitwe</em>. </i> I am a web development enthusiast. If you are here to ask about web development or maybe you want to make some improvements to your site you have come to the right place.</p>
-            <p>There are many website builders online now. These are drag and drop, do-it-yourself builders where you can build websites without any code. I want to learn how to code, and coding cannot be learned by using website builders. The best one is WordPress, in fact many developers in Zambia use WordPress to build websites. This has a steep learning curve compared to the others and you may need some basic coding.</p>
-            <p>If you want to set your course on web design then some of the rising stars are the likes of Wix, Squarespace, Blogger, Webflow, these are just a few of the many. I believe. If you are in <em>Kitwe, Ndola, Lusaka</em>, anywhere in <em>Zambia</em>, you can access these builders. However, I would advise you do so with a laptop, I don't think you can build on a mobile device because the screen would be too small to develop optimally. </p>
-            <p>Web development is just a part of digital marketing. Some agencies can do the full Kaboodle, however, I will be sticking to web design. Below is a small table of tools available to a modern marketeer.</p>
-            <h2 style="display: none;">seo web designer developer Zambia design seo</h2>
-          </div>
-          <div class="col-lg-4 mainindex">
-
-          </div>
-        </div>
-
-
-      </div> 
-
-      
-     
-      
+      <section class="intro2">
+        <aside>
+            <img loading="lazy" 
+            width="400"
+            height="279"
+            src="./assets/img/clouds.jpg" 
+            alt="web design boost of power" 
+            title="design boost zambia">
+        </aside>
+        <article>
+            <h4>Get a digital boost</h4>
+            <p>I am a web designer and web developer, now commonly known as a front end developer. Grow your brand strength with strong and impressionable designs. Keep up with the future in investing in digital online marketing. Rank on the top pages of Google search for your business keywords.</p>
+        </article>
     </section>
-    <!--table-->
-    <section class="bg">
 
-      <div class="container table">
-        <h2 style="text-align: center;">MARKETING</h2>
-        <div class="row">
-          <div class="col-6">
-            <h2>Popular</h2>
-            <ul>
-              <li>Broadcasting: tv and radio</li>
-              <li>Print: newspaper, magazines</li>
-              <li>Billboards</li>
-              <li>Handout: brochures, flyers, business cards</li>
-              <li>sales people : door to door selling</li>
-              <li>Direct mail</li>
-              <li>signage: walls, taxis</li>
-              <li>promotional material: calendars, diaries, pens...</li>
-            </ul>
+    <section class="section2">
+      <img loading="lazy" 
+      src="./assets/img/website-startup.svg" 
+      alt="web developer office">
+      
+      <article class="articles1">
+          <h2>Rank with Google</h2>
+
+          <div class="icon1">
+              <h3>Responsive</h3>
+              <p>Google favours web responsive designs. These are web sites that are mobile first and mobile friendly. The web page adjusts images and font sizes as the size of the screen changes, and elements stack vertically or wrap downwards with small screens.</p>
           </div>
-          <div class="col-6">
-            <h2>Digital</h2>
-              <ul>
-                <li>Social media </li>
-                    <li>facebook</li>
-                    <li>twitter</li>
-                    <li>instagram</li>
-                <li>bulk email / newsletter</li>
-                <li>websites</li>
-                <li>Search Engine Marketing</li>
-                <li>video: you tube</li>
-               </ul>
-            </div>
-        </div>
-      </div>
-    </section>
-            
+          <div class="icon2">
+              <h3>Fast</h3>
+              <p>No one likes slow websites. New customers may even abandon your site if it is too slow. Download speed is the first impression a customer has interacting with your site. Fast websites will help your website rank better. Take into account some customers are still on 3G.</p>
+          </div>
+          <div class="icon3">
+              <h3>SEO - Search Engine Optimization</h3>
+              <p>Google ranks how trustworthy and authoritative your website is for the needs of the internet users. Low quality websites will be pushed down. Follow best practises to maximise on google rankings.</p>
+
+          </div>
+
+      </article>
+  </section>
+      
+      
+      
+      
+      
+      
+    
     <section class="container">
       <h2>Web developer vs web designer</h2>
       <div class="row">
@@ -302,64 +456,64 @@
         </div>
       </div>
     </section>
-
-   
-
-            <!-- Blogs -->
-
-      <div class="container-fluid blog">
-        <div class="row">
-          <div class="container">
-            <div class="col-lg-8 mrg1 article2 opaque">
-              <h3>Featured article</h3>
-
-              <h2>11 REASONS WHY YOU NEED A WEBSITE FOR YOUR BUSINESS</h2>
-              <br />
-              <h2>1. Customer expectation</h2>
-              <h2 style="display: none;">seo web designer developer Zambia design seo</h2>
-              <p>
-                We are in the 21st century, your tech-minded and
-                mobile-conscious customers are expecting more and more now for
-                businesses to have a website so that they can find out more
-                about them online.
-              </p>
-
-              <h2>2. Control your brand</h2>
-              <h2 style="display: none;">seo web designer developer Zambia design seo</h2>
-              <p>
-                A website acts as a platform that you can shape a favourable
-                perception of your business in a way that social media cannot
-                provide. In particular protecting yourself from being reviewed
-                unknowingly and/or negatively from damaging and hostile
-                comments.<br />
-                79% of users who read online reviews, believe them. Reduce that
-                negativity by posting your own positive testimonials.
-              </p>
-              <p></p>
-              <a
-                style="color: #c83e4d; font-size: 1.8rem; font-weight: 700;"
-                title="web articles"
-                href="blogs/11-reasons-why-you-need-a-website-kitwe-zambia.html"
-                >Continue to article page</a
-              >
-            </div>
+    
+    
+    
+    <!-- Blogs -->
+    
+    <div class="container-fluid blog">
+      <div class="row">
+        <div class="container">
+          <div class="col-lg-8 mrg1 article2 opaque">
+            <h3>Featured article</h3>
+            
+            <h2>11 REASONS WHY YOU NEED A WEBSITE FOR YOUR BUSINESS</h2>
+            <br />
+            <h2>1. Customer expectation</h2>
+            <h2 style="display: none;">seo web designer developer Zambia design seo</h2>
+            <p>
+              We are in the 21st century, your tech-minded and
+              mobile-conscious customers are expecting more and more now for
+              businesses to have a website so that they can find out more
+              about them online.
+            </p>
+            
+            <h2>2. Control your brand</h2>
+            <h2 style="display: none;">seo web designer developer Zambia design seo</h2>
+            <p>
+              A website acts as a platform that you can shape a favourable
+              perception of your business in a way that social media cannot
+              provide. In particular protecting yourself from being reviewed
+              unknowingly and/or negatively from damaging and hostile
+              comments.<br />
+              79% of users who read online reviews, believe them. Reduce that
+              negativity by posting your own positive testimonials.
+            </p>
+            <p></p>
+            <a
+            style="color: #c83e4d; font-size: 1.8rem; font-weight: 700;"
+            title="web articles"
+            href="blogs/11-reasons-why-you-need-a-website-kitwe-zambia.html"
+            >Continue to article page</a
+            >
           </div>
         </div>
       </div>
-
+    </div>
+    
     <section class="container">
       <h2>Cost of building up a website</h2>
       <p>There are 3 main costs to starting up your website: the web designer, the domain name and hosting.</p>
       <div class="row">
         <div class="col-lg-8">
           <h3>Web designer / developer</h3>
-         <p>
-           You have plenty of choice when choosing a web developer or designer. First you must decide to choose a payment package, where the agency (<a href="./blogs/freelancer-vs-agency.html" style="color: #c83e4d; " title="agency vs freelancer">agency vs freelancer</a>) will charge you either per hour or on job completion. You can hire web developers from the internet (upwork), where the average rate in $20 an hour. Personally this is a tricky choice, as the time frame of finishing is uncertain hence making the finish cost unpredictable.
-         </p>
-         <p>
+          <p>
+            You have plenty of choice when choosing a web developer or designer. First you must decide to choose a payment package, where the agency (<a href="./blogs/freelancer-vs-agency.html" style="color: #c83e4d; " title="agency vs freelancer">agency vs freelancer</a>) will charge you either per hour or on job completion. You can hire web developers from the internet (upwork), where the average rate in $20 an hour. Personally this is a tricky choice, as the time frame of finishing is uncertain hence making the finish cost unpredictable.
+          </p>
+          <p>
             I would suggest for the cost of the finished product. Informational/corporate websites average about K5000. E-commerce sites go above K13000. Many websites in Zambia are designed with WordPress. Generally, websites that are made in Lusaka are most costly than the ones made in the Copperbelt.
-         </p>  
-         <h3>Domain name</h3>
+          </p>  
+          <h3>Domain name</h3>
           <p>Your website must have a domain name. This is the reference point for your website in the internet. It is basically a web address. Domain names cost between $5 to $20 a year. These domain names are subject to availability. You can purchase them from the internet like Namecheap.com, or you can purchase them from a local host in Zambia. Once you have a domain name, you then choose a domain extension, the popular extension is dot com (.com). The extension is personal preference there are many. However, if you have noticed, I am using the .netlify.app extension.</p>
           <h3>Web hosting</h3>
           <p>Web hosting is the facility of hosting your website in internet. Local hosting charges vary, I have seen some starter rates at K230 per month, some K1400 if you pay for the full year.</p>
@@ -375,7 +529,7 @@
         </div>
       </div>
     </section>
-
+    
     <section class="container">
       <h2>How to make a website</h2>
       <div class="row">
@@ -385,24 +539,24 @@
           <p>HTML is the chassis, the skeletal backbone, the content of the webpage. It is possible to make a webpage from HTML alone, but that would be pretty boring. CSS (cascading style sheets) this language as it suggests 'styles' your HTML elements. CSS has improved so much you can do some animation outside Javascript. Javascript provides program logic which HTML and CSS cannot do.</p>
           <p>If you are new to programming, or new to HTML, CSS and javascript, you must practise and design until you become accustomed to the syntax (grammar) of the languages so the program works accordingly. Miss a comma, semi colon, and even a mispelling the program won't work.</p>
           <p>Master your syntax, as you do this, and you will make tons of mistakes, from there you will learn basic debugging (finding program problems, and correcting them), and believe me, programs will get much more complicated.</p>
-
-
+          
+          
           <div class="bubble2 box1">
             <p class="nojustify">
               Pro tip: do not memorize everything, most programmers cannot memorize the thousands of commands available. Learn how to use them and these tools as you need them.
             </p> 
           </div>
-
+          
           <p>Don't worry when you feel that you are spending more time staring at the screen than bashing in some code into your computer. You will spend considerable amount of time problem solving.</p>
           <h2 style="display: none;">seo web designer developer Zambia design seo</h2>
         </div>
-          <div class="col-lg-4">
-            
+        <div class="col-lg-4">
+          
         </div>
       </div>
     </section>
-
-
+    
+    
     <section class="container">
       <h2>Learn a framework</h2>
       <div class="row">
@@ -416,27 +570,27 @@
         </div>
       </div>
     </section>
-
+    
     <section class="container">
       <h2>Learn basic typography</h2>
       <div class="row">
         <div class="col-lg-8">
-            <p>Typography has to do with text design is presented on the webpage. The 'h1' tag is very important for SEO. Ensure one keyword is placed in an h1 tag. Use the 'h1' tag sparingly it should be used as a title for the webpage. Use the smaller headers for subtitles 'h2' to 'h6'. A common trend with titles is the lesser it becomes the smaller the font size. You can also use lower opacity to contrast from the greater title headers.</p>
+          <p>Typography has to do with text design is presented on the webpage. The 'h1' tag is very important for SEO. Ensure one keyword is placed in an h1 tag. Use the 'h1' tag sparingly it should be used as a title for the webpage. Use the smaller headers for subtitles 'h2' to 'h6'. A common trend with titles is the lesser it becomes the smaller the font size. You can also use lower opacity to contrast from the greater title headers.</p>
             <p>Use a minimum of two fonts on your page design. One for the titles and the other for the content.</p>
             <p>Exercise care when you put text on images. Often times the text is difficult to read because of a low contrast value between the text and the image. In Google chrome tools you will score lowly on the accessibility score.</p>
             <p>Do not use too many colours. Web designers use a maximum of 5 different palettes per page.</p>
             <p>Make a provision also for your text to be read on mobile devices. Web designers suggest a 1.5 - 1.7 rem font size for content text. </p>
             <p>When you prepare slabs of text for the bigger screens either use 2 - 3 columns for reading text. If you decide to use one columns reduce the max-width to 600 - 700px wide. It is common practise that text should not read the full width of a big screen.</p>
             <p>Interrupt chunks of text with images, tables, charts, clippart, symbols, or the page will be boring and monotonous.</p>
+          </div>
+          <div class="col-lg-4">
+            
+          </div>
         </div>
-        <div class="col-lg-4">
-          
-        </div>
-      </div>
-    </section>
-    <section class="container">
-      <h2>Web Development</h2>
-      <div class="row">
+      </section>
+      <section class="container">
+        <h2>Web Development</h2>
+        <div class="row">
         <div class="col-lg-8">
           <p>If you have finished your master design .. a big well done. I believe this is a personal choice: you can launch your website now for all to see, or prepare SEO for the web site. It's finished, so why not?</p>
           <p>Opinions vary. I believe once the website is visually finished. It should be registered with google and launched, because it takes time for the website to be registered and ranked with google. </p>
@@ -459,14 +613,14 @@
         <div class="col-lg-2">
           <img loading="lazy" src="./assets/img/zambia-1.png" alt="zambia responsive" title="responsive">
         </div>
-
-
+        
+        
         <div class="col-lg-8">
           <p>This is not about how fast the website is, but rather its responsiveness to different viewports like mobile devices. Developers create their websites on laptops or large screens, but they have to make designs as to how the website will look on a mobile device.</p>
           <p>If the website is not mobile optimized it will take on two possible looks. One, the images and the text will shrink to fit into the mobile device, this will make the text and images too small to read and appreciate.</p>
           <p>The second look: will be the images will be cropped and text will be overflowing on the horizontal axis. The user has to scroll left and right to read the text and see the complete image. This is not a pleasant user experience.</p>
           <p>This can be solved by using a grid layout and media queries breakpoints. The responsive grid layout will force the content that is stacked horizontally to be stacked vertically. So there will be no need for the user to scroll left and right. Media queries, is a css function that can test the width of the viewport, if the viewport is the size of a mobile device, it can instruct the browser to load a mobile version of the image.</p>
-
+          
           <div class="bubble1 box1">
             <p class="nojustify">
               Webpage responsiveness is a Google ranking factor
@@ -474,16 +628,16 @@
           </div>
         </div>
       </div>
-
-
+      
+      
       <h3>Website speed</h3>
       
       <div class="row">
-
+        
         <div class="col-lg-2">
           <img loading="lazy" src="./assets/img/zambia-2.png" alt="zambia responsive" title="responsive">
         </div>
-
+        
         <div class="col-lg-8">
           <p>This is obvious. No one likes a slow website.</p>
           <p>Not only do we need to get into Google's good book, website studies around the world have shown that client's leave websites that take too long to load</p>
@@ -497,121 +651,166 @@
             <li>use correct image formats</li>
             <li>use correct image sizes</li>
             <li>compress images</li>
-          <li>use media queries to select correct sized images for different screent sizes and aspect ratios</li>
-          <li>check for errors in the console</li>
-          <li>switch of auto play if you have videos</li>
-          <li>delay loading images that are under the fold</li>
-          <li>minify HTML, CSS and Javascript</li>
-          <li>Purge the CSS (do this cautiously)</li>
-          <li>prefetch 3rd party sources that will be used in later</li>
-          <li>minimize 3rd party downloads like imported fonts</li>
-          
-        </ul>
+            <li>use media queries to select correct sized images for different screent sizes and aspect ratios</li>
+            <li>check for errors in the console</li>
+            <li>switch of auto play if you have videos</li>
+            <li>delay loading images that are under the fold</li>
+            <li>minify HTML, CSS and Javascript</li>
+            <li>Purge the CSS (do this cautiously)</li>
+            <li>prefetch 3rd party sources that will be used in later</li>
+            <li>minimize 3rd party downloads like imported fonts</li>
+            
+          </ul>
         </div>
       </div>
-
-
+      
+      
       <h3>SEO search engine optimization</h3>
-
+      
       <div class="row">
-
+        
         <div class="col-lg-2">
           <img loading="lazy" src="./assets/img/zambia-3.png" alt="zambia responsive" title="responsive">
         </div>
-
+        
         <div class="col-lg-8">
-        <p>SEO is the implementation of methods and design practises that follow search engine guidelines for a website to rank optimally. Organic search, is ranking in the search engine for particular keywords without the use of paid ads.</p>
-        <p>I have deliberately covered website responsiveness and website speed before SEO, because the two are important ranking factors for SEO design.</p>
-
-        <p>Google does not rank pretty websites. However, if you have an ugly website, it can reflect badly on your company image or profile.</p>
-        <p>Use images sparingly, and if you use them ensure you use the correct format and they are optimized. Images beautify your website, and they also increase file size. This means higher <a style="color: #c83e4d;" href="#bandwidth">bandwidth</a> and slower download times.</p>
-        <p>Actionable SEO:</p>
-        <ul>
-          <li>Fill in the title tag</li>
-          <li>Fill in the description tag</li>
-          <li>Fill in the keywords tag (optional)</li>
-          <li>Fill in the robot.txt meta tag</li>
-          <li>Make sure h1 tag has a keyword</li>
-          <li>Some h2 and h3 tags have keywords</li>
-          <li>First 100 words must have keyword</li>
-          <li>Images must have alt descriptions, titles and file names</li>
-          <li>Content must have 2-3% keyword density</li>
-          <li>Industry related keywords</li>
-          <li>Backlinks</li>
-          <li>External links</li>
-          <li>Internal links</li>
-          <li>A robot.txt file</li>
-          <li>A sitemap.xml</li>
-        </ul>
-      </div>
+          <p>SEO is the implementation of methods and design practises that follow search engine guidelines for a website to rank optimally. Organic search, is ranking in the search engine for particular keywords without the use of paid ads.</p>
+          <p>I have deliberately covered website responsiveness and website speed before SEO, because the two are important ranking factors for SEO design.</p>
+          
+          <p>Google does not rank pretty websites. However, if you have an ugly website, it can reflect badly on your company image or profile.</p>
+          <p>Use images sparingly, and if you use them ensure you use the correct format and they are optimized. Images beautify your website, and they also increase file size. This means higher <a style="color: #c83e4d;" href="#bandwidth">bandwidth</a> and slower download times.</p>
+          <p>Actionable SEO:</p>
+          <ul>
+            <li>Fill in the title tag</li>
+            <li>Fill in the description tag</li>
+            <li>Fill in the keywords tag (optional)</li>
+            <li>Fill in the robot.txt meta tag</li>
+            <li>Make sure h1 tag has a keyword</li>
+            <li>Some h2 and h3 tags have keywords</li>
+            <li>First 100 words must have keyword</li>
+            <li>Images must have alt descriptions, titles and file names</li>
+            <li>Content must have 2-3% keyword density</li>
+            <li>Industry related keywords</li>
+            <li>Backlinks</li>
+            <li>External links</li>
+            <li>Internal links</li>
+            <li>A robot.txt file</li>
+            <li>A sitemap.xml</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
   
   <section class="container">
 
-      <h2>Web applications or web apps</h2>
-      <div class="row">
-         <div class="col-lg-8">
-           <p>A web application or a web app is a program design that allows the conversion of a website into an icon in the homescreen.</p>
-           <p>The web app will behave like an app downloaded from google store.</p>
+    <h2>Web applications or web apps</h2>
+    <div class="row">
+      <div class="col-lg-8">
+        <p>A web application or a web app is a program design that allows the conversion of a website into an icon in the homescreen.</p>
+        <p>The web app will behave like an app downloaded from google store.</p>
            <p>The web app will have offline capabilities.</p>
-         </div>
-      <div class="col-lg-4">
-        
-      </div>
-    </div>
-  </section>
-    
-    
-    <div id="web-price" class="container" style="max-width: 600px; margin: 0 auto;">
-
-      <div class="card box1">
-        <div class="card-header">
-          Features
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">Basic startup plan</h5>
-          <p class="card-text">Website specifications:</p>
-          <ul>
-            <li>website design with 3 - 5 pages</li>
-            <li>hosting included</li>
-            <li>domain name with a .netlify.app extension</li>
-            <li>Search engine optimized for google</li>
-            <li>Mobile responsive</li>
-            <li>image compression</li>
-            <li>contact page with responsive contact form</li>
-            <li>1 month revision</li>
-          </ul>
-          <div style="margin: 1rem; text-align: center;">
-            <a href="contact.html" class="btn btn-lg btn-danger opaque box1">K700</a>
-
+          </div>
+          <div class="col-lg-4">
+            
           </div>
         </div>
-      </div>
-      <a style="color: blue;" rel="noopener" target="_blank" href="https://website-ndola.netlify.app">website-ndola.netlify.app</a>
-      <br>
-      <a style="color: blue;" rel="noopener" target="_blank" href="https://ron-armengol-blog.netlify.app">ron-armengol-blog.netlify.app</a>
-      <br>
-      <a style="color: blue;" rel="noopener" target="_blank" href="https://ronarmengol.netlify.app">ronarmengol.netlify.app</a>
-    </div>  
-    
-    <!-- Footer-->
-    <footer class="footer py-4">
-      <div class="container">
-        <div>
-          <div>Copyright © RonArmengolWeb 2020</div>
-          <!-- <div class="col-lg-4 my-3 my-lg-0">
-            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a><a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a><a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
-          </div> -->
-          <!-- <div class="col-lg-4 text-lg-right"><a class="mr-3" href="#!">Privacy Policy</a><a href="#!">Terms of Use</a></div> -->
+      </section>
+      
+      
+      <div id="web-price" class="container" style="max-width: 600px; margin: 0 auto;">
+        
+        <div class="card box1">
+          <div class="card-header">
+            Features
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Basic startup plan</h5>
+            <p class="card-text">Website specifications:</p>
+            <ul>
+              <li>website design with 3 - 5 pages</li>
+              <li>hosting included</li>
+              <li>domain name with a .netlify.app extension</li>
+              <li>Search engine optimized for google</li>
+              <li>Mobile responsive</li>
+              <li>image compression</li>
+              <li>contact page with responsive contact form</li>
+              <li>1 month revision</li>
+            </ul>
+            <div style="margin: 1rem; text-align: center;">
+              <a href="contact.html" class="btn btn-lg btn-danger opaque box1">K700</a>
+              
+            </div>
+          </div>
         </div>
+        <a style="color: blue;" rel="noopener" target="_blank" href="https://website-ndola.netlify.app">website-ndola.netlify.app</a>
+        <br>
+        <a style="color: blue;" rel="noopener" target="_blank" href="https://ron-armengol-blog.netlify.app">ron-armengol-blog.netlify.app</a>
+        <br>
+        <a style="color: blue;" rel="noopener" target="_blank" href="https://ronarmengol.netlify.app">ronarmengol.netlify.app</a>
       </div>
-    </footer>
+      
+      
+    </main>
+      
+      <footer class="footer py-4">
+        <div class="container">
+          <div>
+            <div>Copyright © RonArmengolWeb 2020</div>
+          </div>
+        </div>
+      </footer>
+      
+      <!-- instant page -->
+      <!-- <script defer src="//instant.page/5.1.0" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script> -->
+      
+      <script defer>
+        const options = {
+          root: null,
+          rootMargin: '0px',
+          threshold: 0.5
+        }
+        
+        const images = document.querySelectorAll('.animate');
+        
+        let observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.intersectionRatio > 0) {
+              entry.target.classList.add('fancy');
+            } else {
+              entry.target.classList.remove('fancy');
+            }
+          });
+        }, options);
+        
+        images.forEach(image => {
+          observer.observe(image);
+        });
+        </script>
 
-    <!-- instant page -->
-    <script src="//instant.page/5.1.0" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
-    
+        <script defer>
+          let header = document.getElementById('heading1');
+          let headings = [
+              'go online',
+              'approachable',
+              'admirable',
+              'respected',
+              'the brand',
+              'dicoverable',
+              'visible'
+          ]
 
-  </body>
+          let headerCount = 0;
+          setInterval(() => {
+              header.innerHTML = headings[headerCount];
+              headerCount ++;
+              if (headerCount > 4) {
+                  headerCount = 0;
+              }
+          }, 4000);
+
+        </script>
+        
+
+</body>
 </html>
