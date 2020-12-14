@@ -191,14 +191,25 @@ section.intro1 > h3 {
 
 section.intro2 {
       display: flex;
-      margin: 0 0 5rem 0;
       background-color: #010936;
       padding: 1rem 0;
+      justify-content: center;
+      margin-bottom: 8rem;
   }
 
+section.intro2 > aside {
+  flex: 1 1 50%;
+  text-align: center;
+}
+
+section.intro2 > article {
+  flex: 1 1 50%;
+}
+
 section.intro2 img{
-    max-width: 400px;
+    max-width: 600px;
     width: 100%;
+    height: auto;
   }
 
 section.intro2 h4{
@@ -218,57 +229,75 @@ section.intro2 p {
       font-size: 1.1rem;
   }
 
-  .section2 {
-            display: flex;
-            justify-content: space-evenly;
-            border: 1px solid #eceff1;
-            padding: 0 0 1rem 0;
+.google {
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 1px solid #eceff1;
+    padding: 0 0 1rem 0;
+    margin-bottom: 4rem;
 
-        }
+}
 
-        .section2 img {
-            width: 45%;
-            max-width: 500px;
-            align-self: start;
+.google img {
+    width: 45%;
+    max-width: 500px;
+    align-self: start;
 
-            
-        }
+    
+}
 
-        .section2 .articles1 {
-            padding: 0 0 0 2rem;
-            background-color: rgba(240, 244, 247, 0.1);
-        }
+.google .articles1 {
+    padding: 0 0 0 2rem;
+    background-color: rgba(240, 244, 247, 0.1);
+}
 
-        .section2 h2 {
-            padding: 1rem 0 0 0;
-            font-size: 3rem;
-        }
+.google h2 {
+    padding: 1rem 0 0 0;
+    font-size: 3rem;
+}
 
-        .section2 h3 {
-            text-transform: uppercase;
-            font-family: monospace;
-            font-weight: 800;
-            font-size: 1.8rem;
-            letter-spacing: 3px;
-        }
+.google h3 {
+    text-transform: uppercase;
+    font-family: monospace;
+    font-weight: 800;
+    font-size: 1.8rem;
+    letter-spacing: 3px;
+}
 
-        .section2 h3:nth-of-type(1) {
-            margin: 2rem 0 0 0;
-        }
+.google h3:nth-of-type(1) {
+    margin: 2rem 0 0 0;
+}
 
-        .section2 p {
-            max-width: 700px;
-            transition: 0.5s;
-            opacity: 0.8;
-            line-height: 1.5rem;
-            
-        }
+.google p {
+    max-width: 700px;
+    transition: 0.5s;
+    opacity: 0.8;
+    line-height: 1.5rem;
+    
+}
 
-        .section2 p:hover {
-            opacity: 1;
-            color: #303f9f;
-            font-size: 1.2rem;
-        }
+.google p:hover {
+    opacity: 1;
+    color: #303f9f;
+    font-size: 1.2rem;
+}
+
+section.intro3 {
+  margin-top: 3rem;
+}
+
+section.intro3 h3 {
+    text-align: center;
+    font-size: 2.4rem;
+}
+
+section.intro3 p {
+    max-width: 800px;
+    width: 90%;
+    margin: 3rem auto;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+}
 
 
 @media screen and (max-width: 800px) {
@@ -309,6 +338,16 @@ section.intro2 p {
         margin: 0 auto;
         width: 100%;
     }
+
+    .google {
+      flex-direction: column;
+    }
+
+    .google img {
+      margin: 0 auto;
+      width: 100%;
+   }
+
   }
 
 
@@ -412,7 +451,7 @@ section.intro2 p {
         </article>
     </section>
 
-    <section class="section2">
+    <section class="google">
       <img loading="lazy" 
       src="./assets/img/website-startup.svg" 
       alt="web developer office">
@@ -420,15 +459,15 @@ section.intro2 p {
       <article class="articles1">
           <h2>Rank with Google</h2>
 
-          <div class="icon1">
+          <div>
               <h3>Responsive</h3>
               <p>Google favours web responsive designs. These are web sites that are mobile first and mobile friendly. The web page adjusts images and font sizes as the size of the screen changes, and elements stack vertically or wrap downwards with small screens.</p>
           </div>
-          <div class="icon2">
+          <div>
               <h3>Fast</h3>
               <p>No one likes slow websites. New customers may even abandon your site if it is too slow. Download speed is the first impression a customer has interacting with your site. Fast websites will help your website rank better. Take into account some customers are still on 3G.</p>
           </div>
-          <div class="icon3">
+          <div>
               <h3>SEO - Search Engine Optimization</h3>
               <p>Google ranks how trustworthy and authoritative your website is for the needs of the internet users. Low quality websites will be pushed down. Follow best practises to maximise on google rankings.</p>
 
@@ -437,7 +476,10 @@ section.intro2 p {
       </article>
   </section>
       
-      
+  <section class="intro3">
+    <h3>How can I help you?</h3>
+    <p>I will produce a stable, safe, fast, responsive web site for your business or personal application. It will not be a standalone work on photoshop but it will be a working, online web site which can be discovered by Google with the relevant keywords.</p>
+</section>
       
       
       
