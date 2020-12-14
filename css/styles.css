@@ -1,0 +1,46 @@
+.section6 {
+    margin: 5rem 0 5rem 0;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+
+.section6 article {
+    flex: 1;
+    padding: 1rem;
+    border: 1px solid #e1f5fe;
+}
+
+.section6 p {
+    text-align: left;
+    line-height: 1.5;
+    font-size: 1.1rem;
+}
+
+.section6 .article2 svg {
+    transform: rotate(0);
+    transition: 1s;
+}
+
+.section6 .article2 svg:hover {
+    transform: rotate(360deg);
+}
+
+@media screen and (max-width: 800px) {
+    .section6 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section6 article {
+        border: none;
+    }
+
+    .section6 p {
+        max-width: 700px;
+        margin: 0 auto;
+       
+    }
+}
