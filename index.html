@@ -83,9 +83,10 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
-header > picture {
+/* header > picture {
     width: 100%;   
     height: 100%;
     position: absolute;
@@ -93,13 +94,31 @@ header > picture {
     opacity: 1;
     z-index: -1;
 
-}
+} */
+header > video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-position: center center;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  opacity: 1;
 
-header > picture > img {
+    /* width: 100%;   
+    height: 100%;
+    position: absolute;
+    top: 0;
+    opacity: 1;
+    z-index: -1; */
+
+} 
+
+/* header > picture > img {
     width: 100%;
     height: 100%;
     position: absolute;
-  }
+  } */
   
   header > img {
     position: relative;
@@ -108,12 +127,13 @@ header > picture > img {
     min-width: 180px;
     margin-right: 2vw;
     top: -8vw;
+    opacity: 0.7;
     
   }
 
 header > div {
     color: black;
-    background-color: rgba(255,255,255,0.7);
+    background-color: rgba(255,255,255,0.6);
     padding: calc(2vw) calc(5vw);
     border-radius: 20px;
     border: 1px solid blue;
@@ -122,12 +142,12 @@ header > div {
 header > div > h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 900;
-    font-size: clamp(2rem, 5vw, 6rem);
+    font-size: clamp(2rem, 5vw, 4rem);
 }
 header > div > h2 {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 100;
-    font-size: clamp(1.0rem, 3vw, 2rem);
+    font-size: clamp(1.0rem, 3vw, 1.7rem);
     color: #1a237e;
 }
 
@@ -311,14 +331,14 @@ section.intro3 p {
     }
 
     header > img {
-        top: -8%;
+        /* top: -8%; */
         transform: scaleX(-1);
 
     }
 
     section.intro2 {
-                flex-direction: column;
-            }
+        flex-direction: column;
+    }
             
     section.intro2 aside {
         background-color: #010936;
@@ -406,27 +426,33 @@ section.intro3 p {
   </head>
   <body>
     <header>
-      <picture>
+      <!-- <picture>
           <source media="(min-width:700px)" srcset="./assets/img/website-lg.jpg">
               <img 
                   width="500px"
                   height="728px"
                   loading="lazy"
                   src="assets/img/website-sm.jpg" alt="building">
-      </picture>
+      </picture> -->
+
       <img 
         loading="lazy"
         width="500px"
         height="500px"
         src="./assets/img/zambia-eagle.png" alt="">
+
+        <video
+        autoplay loop muted preload="none" playsinline
+        width="100%"
+        source src="./assets/img/vapour.mp4" type="video/mp4"></video>
       <div>
           <h1>Web designer <span class="none">seo web designer developer Zambia design</span></h1>
           <h2>Kitwe Zambia</h2>
       </div>
     </header>
-    <span>
+    <!-- <span>
       Photo by Chris Schippers from Pexels
-    </span>
+    </span> -->
 
     <main>
       <section class="intro1">
