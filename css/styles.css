@@ -48,7 +48,7 @@ section.website + h3 {
     height: 110vh;
     opacity: 0.15;
     z-index: -1;
-    top: -40%;
+    top: -50%;
 }
 
 .section5 .text {
@@ -84,7 +84,22 @@ section.website + h3 {
     background-color: #fce4ec;
 }
 
+.section5 + hr {
+    width: 80%;
+    margin: 4rem auto 2rem;
+}
 
+
+.section7 h2 {
+    font-size: 4rem;
+    text-align: center;
+}
+
+.section7 video {
+    max-width: 400px;
+    display: block;
+    margin: 1rem auto;
+}
 .section8 .developer {
     display: flex;
     flex-wrap: wrap;
@@ -112,7 +127,7 @@ section.website + h3 {
     padding: 0 1rem 0 1rem;
 }
 
-.section8 img {
+.section8 > img {
     max-width: 500px;
     margin: 0 auto;
 }
@@ -140,6 +155,32 @@ section.website + h3 {
     font-size: 1.4rem;
 }
 
+.performance {
+    margin-top: 5rem;
+}
+
+.performance > h2 {
+    font-size: clamp(1.5rem, 5vw, 4rem);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.building {
+    margin-top: 5rem;
+}
+
+.building h2 {
+    font-size: clamp(1.5rem, 6vw, 4rem);
+    text-align: center;
+    margin-bottom: 2vw;
+}
+
+.building img {
+    display: block;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
 
 @media screen and (max-width: 800px) {
     section.website {
@@ -163,7 +204,7 @@ section.website + h3 {
 
     .section5 > img {
         width: 100%;
-        top: -30%;
+        top: -40%;
         
 
     }
