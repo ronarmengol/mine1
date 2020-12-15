@@ -28,16 +28,33 @@
     transform: rotate(360deg);
 }
 
+section.website + h3 {
+    font-size: 3rem;
+    text-align: center;
+}
+
 .section5 {
     display: flex;
     justify-content: center;
     flex-direction: row;
-
+    position: relative;
+    margin-bottom: 3rem;
+    height: 100%;
 }
 
-.titleSection5 {
-    margin-bottom: 0;
+.section5 > img {
+    position: absolute;
+    width: 90%;
+    height: 110vh;
+    opacity: 0.15;
+    z-index: -1;
+    top: -40%;
 }
+
+.section5 .text {
+    margin-top: 2rem;
+}
+
 
 .section5 ul {
     padding: 1rem;
@@ -51,9 +68,10 @@
     padding: 1rem;
     list-style: none;
     border-radius: 20px;
-    font-weight: 800;
+    font-weight: 400;
     text-align: center;
     border: 1px solid blue;
+    font-size: 1.4rem;
 
 }
 
@@ -65,6 +83,63 @@
 .section5 li:nth-of-type(6) {
     background-color: #fce4ec;
 }
+
+
+.section8 .developer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section8 .dev {
+    flex: 1;
+    padding: 0 0.5rem;
+}
+
+.section8 .hosting{
+    background-color: #001825;
+    display: flex;
+    margin-top: 3rem;
+
+}
+
+.section8 .hosting h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 1rem 0 2rem 0;
+}
+
+.section8 .hosting p {
+    padding: 0 1rem 0 1rem;
+}
+
+.section8 img {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.section8 .hostingText {
+    color: #f1f1f1;
+    max-width: 800px;
+    margin: 0 auto;
+    background: #001825 ;
+    width: 100%;
+}
+
+.section8 .article5 {
+    width: 90%;
+    margin: 1rem auto;
+    max-width: 800px;
+}
+
+.section8 .article6 h3 {
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.section8 .article6 p{
+    font-size: 1.4rem;
+}
+
 
 @media screen and (max-width: 800px) {
     section.website {
@@ -86,11 +161,36 @@
         flex-direction: column;
     }
 
+    .section5 > img {
+        width: 100%;
+        top: -30%;
+        
+
+    }
+
     .section5 article {
         margin: 0 auto;
     }
 
-    .section5 .section7 {
-        padding: 0 0.5rem;
+    .section5 .text {
+        padding: 0 1rem;
+    }
+
+    .section8 .developer {
+        flex-direction: column;
+    }
+
+    .section8 .dev p{
+        margin-left: 1rem;
+        border-left: 8px solid orange;
+        padding: 1rem 2rem;
+    }
+
+    .section8 .hosting {
+        flex-direction: column;
+    }
+
+    .section8 .hosting img {
+        width: 100%;
     }
 }
