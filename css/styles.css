@@ -91,7 +91,7 @@ section.website + h3 {
 
 
 .section7 h2 {
-    font-size: 4rem;
+    font-size: clamp(2rem, 5vw, 4rem);
     text-align: center;
 }
 
