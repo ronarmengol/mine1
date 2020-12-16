@@ -216,11 +216,11 @@ section.intro1 > h3 {
 }
 
 section.intro2 {
-      display: flex;
-      background-color: #010936;
-      padding: 1rem 0;
-      justify-content: center;
-      margin-bottom: 8rem;
+    display: flex;
+    background-color: #010936;
+    padding: 1rem 0;
+    justify-content: center;
+    margin-bottom: 8rem;
   }
 
 section.intro2 > aside {
@@ -454,11 +454,11 @@ section.intro3 p {
                   src="assets/img/website-sm.jpg" alt="building">
       </picture> -->
 
-      <img 
+      <!-- <img 
         loading="lazy"
         width="500px"
         height="500px"
-        src="./assets/img/zambia-eagle.png" alt="">
+        src="./assets/img/zambia-eagle.png" alt=""> -->
 
         <video
           autoplay loop muted preload="none" playsinline
@@ -652,55 +652,55 @@ width="50px" height="50px" fill="#3949ab" viewBox="0 0 120 120" enable-backgroun
 
 
     <section class="performance">
-      <h2>Web performance</h2>
-      <p>
-        Google does not rank websites based on its goods looks and aesthetic design. Google factors in other technical essentials for the website to rank optimally in their search engine.
-      </p>
-      <p>
-        Important ranking factors include web site mobile friendliness, SEO (search engine optimization), load speed and backlinks.
-      </p>
-      <p>
-        The exclusion of incorporating web performance attributes will make your website unnoticed together with the hundreds of millions of websites that are in the internet.
-      </p>
-      <p>
-        A successful website must infuse these technical aspects together with great user experience with web design and amazing content.
-      </p>
-      <p>
-        It is important to note that after developing the guidelines necessary to rank well in Google, it must be important to note at the beginning that ranking does take time. Google must discover your new website, and crawl the contents and index it in its vast database.
-      </p>
+      <div class="intro">
+
+        <h2>Web performance</h2>
+        <p id="cool1">
+          Google does not rank websites based on its goods looks and aesthetic design. Google factors in other technical essentials for the website to rank optimally in their search engine.
+        </p>
+        <p>
+          Important ranking factors include web site mobile friendliness, SEO (search engine optimization), load speed and backlinks.
+        </p>
+        <p>
+          The exclusion of incorporating web performance attributes will make your website unnoticed together with the hundreds of millions of websites that are in the internet.
+        </p>
+        <p>
+          A successful website must infuse these technical aspects together with great user experience with web design and amazing content.
+        </p>
+        <p>
+          It is important to note that after developing the guidelines necessary to rank well in Google, it must be important to note at the beginning that ranking does take time. Google must discover your new website, and crawl the contents and index it in its vast database.
+        </p>
         <p>Indexing can take time. It can take from 2 weeks to 6 months.</p>
         <p>While google is resolving the ranking we need to resolve 3 behind the scenes issues, so our website can rank in the future.</p>
-      
-        <p><strong>Website responsiveness</strong></p>
-        <p><strong>Website speed</strong></p>
-        <p><strong>Website SEO</strong></p>
+        
 
-    <h3>Website responsiveness</h3>
-    <div class="row">
+        <p id="cool1"><strong>Website responsiveness <br>
+        Website speed <br>
+        Website SEO</strong></p>
+      </div>
+        
+      <div class="responsive">
+      <h3>Website responsiveness</h3>
       
       
-      
-      <div class="col-lg-8">
         <p>This is not about how fast the website is, but rather its responsiveness to different viewports like mobile devices. Developers create their websites on laptops or large screens, but they have to make designs as to how the website will look on a mobile device.</p>
         <p>If the website is not mobile optimized it will take on two possible looks. One, the images and the text will shrink to fit into the mobile device, this will make the text and images too small to read and appreciate.</p>
         <p>The second look: will be the images will be cropped and text will be overflowing on the horizontal axis. The user has to scroll left and right to read the text and see the complete image. This is not a pleasant user experience.</p>
         <p>This can be solved by using a grid layout and media queries breakpoints. The responsive grid layout will force the content that is stacked horizontally to be stacked vertically. So there will be no need for the user to scroll left and right. Media queries, is a css function that can test the width of the viewport, if the viewport is the size of a mobile device, it can instruct the browser to load a mobile version of the image.</p>
         
-        <div class="bubble1 box1">
-          <p class="nojustify">
-            Webpage responsiveness is a Google ranking factor
-          </p> 
-        </div>
-      </div>
+        <p class="nojustify">
+          Webpage responsiveness is a Google ranking factor
+        </p> 
     </div>
     
     
-    <h3>Website speed</h3>
+    <div class="speed">
+
+
+      <h3>Website speed</h3>
     
-    <div class="row">
       
       
-      <div class="col-lg-8">
         <p>This is obvious. No one likes a slow website.</p>
         <p>Not only do we need to get into Google's good book, website studies around the world have shown that client's leave websites that take too long to load</p>
         <p>Studies have shown that slow websites give an impression that it is not professionally made and the download speed is the first experience a visitor has over the website.</p>
@@ -724,15 +724,13 @@ width="50px" height="50px" fill="#3949ab" viewBox="0 0 120 120" enable-backgroun
           
         </ul>
       </div>
-    </div>
     
     
+    <div class="seo">
     <h3>SEO search engine optimization</h3>
     
-    <div class="row">
       
       
-      <div class="col-lg-8">
         <p>SEO is the implementation of methods and design practises that follow search engine guidelines for a website to rank optimally. Organic search, is ranking in the search engine for particular keywords without the use of paid ads.</p>
         <p>I have deliberately covered website responsiveness and website speed before SEO, because the two are important ranking factors for SEO design.</p>
         
@@ -756,7 +754,6 @@ width="50px" height="50px" fill="#3949ab" viewBox="0 0 120 120" enable-backgroun
           <li>A robot.txt file</li>
           <li>A sitemap.xml</li>
         </ul>
-      </div>
     </div>
   </div>
 </section>
@@ -767,7 +764,11 @@ width="50px" height="50px" fill="#3949ab" viewBox="0 0 120 120" enable-backgroun
       <img 
         loading="lazy"
         src="./assets/img/web-development.svg" alt="website building">
-      <p>There are 3 main costs to starting up your website: the web designer, the domain name and hosting.</p>
+      <p>There are 3 main costs to starting up your website:
+        The web designer, the domain name and hosting.
+        
+      </p>
+        
       <div class="row">
         <div class="col-lg-8">
           <h3>Web designer / developer</h3>

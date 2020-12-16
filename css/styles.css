@@ -159,10 +159,78 @@ section.website + h3 {
     margin-top: 5rem;
 }
 
-.performance > h2 {
+.performance > .intro {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.performance > .intro > h2 {
     font-size: clamp(1.5rem, 5vw, 4rem);
     margin-bottom: 2rem;
     text-align: center;
+}
+
+.performance > .intro > p {
+    font-size: clamp(1rem, 4vw, 1.4rem);
+    line-height: 2rem;
+}
+.performance > .responsive {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.performance > .responsive > h2 {
+    font-size: clamp(1.5rem, 5vw, 4rem);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.performance > .responsive > p {
+    font-size: clamp(1rem, 4vw, 1.4rem);
+    line-height: 2rem;
+}
+.performance > .speed {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.performance > .speed > h2 {
+    font-size: clamp(1.5rem, 5vw, 4rem);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.performance > .speed > p {
+    font-size: clamp(1rem, 4vw, 1.4rem);
+    line-height: 2rem;
+}
+
+.performance > .speed > ul >li {
+    list-style: none;
+}
+
+.performance > .seo {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.performance > .seo > h2 {
+    font-size: clamp(1.5rem, 5vw, 4rem);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.performance > .seo > p {
+    font-size: clamp(1rem, 4vw, 1.4rem);
+    line-height: 2rem;
+}
+
+.performance > .seo > ul >li {
+    list-style: none;
 }
 
 .building {
@@ -179,6 +247,15 @@ section.website + h3 {
     display: block;
     margin: 0 auto;
     max-width: 800px;
+}
+
+.building > p:nth-of-type(1) {
+    text-align: center;
+    margin: 5rem auto;
+    font-weight: 600;
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    max-width: 900px;
+    padding: 1rem;
 }
 
 
@@ -234,4 +311,15 @@ section.website + h3 {
     .section8 .hosting img {
         width: 100%;
     }
+
+
+}
+
+
+#cool1 {
+    padding: 4rem;
+    border-radius: 10px;
+    font-size: clamp(1.5rem, 4vw, 2.6rem);
+    font-style: italic;
+    line-height: 4vw;
 }
