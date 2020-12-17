@@ -167,14 +167,13 @@ section.website + h3 {
 }
 
 .performance > .intro > h2 {
-    font-size: clamp(1.8rem, 7vw, 5rem);
+    font-size: clamp(2.0rem, 7vw, 5rem);
     margin-bottom: 2rem;
     text-align: center;
 }
 
 .performance > .intro > p {
     font-size: clamp(1rem, 4vw, 1.4rem);
-    line-height: 2rem;
 }
 .performance > .responsive {
     max-width: 900px;
@@ -183,14 +182,13 @@ section.website + h3 {
 }
 
 .performance > .responsive > h2 {
-    font-size: clamp(1.5rem, 5vw, 4rem);
+    font-size: clamp(1.8rem, 5vw, 4rem);
     margin-bottom: 2rem;
     text-align: center;
 }
 
 .performance > .responsive > p {
     font-size: clamp(1rem, 4vw, 1.4rem);
-    line-height: 2rem;
 }
 .performance > .speed {
     max-width: 900px;
@@ -206,7 +204,6 @@ section.website + h3 {
 
 .performance > .speed > p {
     font-size: clamp(1rem, 4vw, 1.4rem);
-    line-height: 2rem;
 }
 
 .performance > .speed > ul >li {
@@ -217,6 +214,12 @@ section.website + h3 {
     max-width: 900px;
     margin: 0 auto;
     padding: 1rem;
+    position: relative;
+}
+
+.performance > .seo > video {
+    position: relative;
+    width: 100%;
 }
 
 .performance > .seo > h2 {
@@ -227,7 +230,6 @@ section.website + h3 {
 
 .performance > .seo > p {
     font-size: clamp(1rem, 4vw, 1.4rem);
-    line-height: 2rem;
 }
 
 .performance > .seo > ul >li {
@@ -312,17 +314,30 @@ section.website + h3 {
     font-size: clamp(1.3rem, 3vw, 1.8rem);   
 }
 
+.foot2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.foot2 a{
+    color: #e91e63;
+    text-decoration: none;
+}
+
 footer {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 80vh;
 }
 
 footer video {
+    height: 100%;
     position: absolute;
     width: 100%;
-    height: 50vh;
     object-fit: cover;
     object-position: center center;
     top: 0;
@@ -341,9 +356,17 @@ footer > div {
 }
 
 footer > div > p {
-    font-size: clamp(1.0rem, 3vw, 1.8rem);
+    font-size: clamp(1.0rem, 3vw, 1.4rem);
 }
 
+.foot {
+    background-color: #030B1E;
+    color: #fce4ec;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    
+}
 
 
 
