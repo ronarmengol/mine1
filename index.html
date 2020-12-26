@@ -314,11 +314,19 @@ section.intro2 p {
 
 .google img {
     width: 45%;
+    margin: 1rem;
     max-width: 500px;
     align-self: start;
-
+    object-fit: cover;
+    clip-path: polygon(36% 36%, 64% 36%, 64% 64%, 36% 64%);
+    animation: clips1 10s ease infinite;
     
 }
+@keyframes clips1 {
+    50% {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+        }
 
 .google .articles1 {
     padding: 0 0 0 2rem;
