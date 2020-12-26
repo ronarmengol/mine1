@@ -555,6 +555,15 @@ section.website + h3 {
     height: auto;
     display: block;
     margin: 1rem auto;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    animation: clip2 6s ease infinite;
+}
+
+
+@keyframes clip2 {
+  50% {
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+  }
 }
 .section8 .developer {
     display: flex;
