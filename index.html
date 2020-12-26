@@ -668,11 +668,20 @@ section.website + h3 {
     margin: 0 auto;
     padding: 1rem;
     position: relative;
-}
-
-.performance > .seo > video {
+  }
+  
+  .performance > .seo > img {
     position: relative;
     width: 100%;
+    clip-path: polygon(30% 0, 30% 20%, 100% 20%, 100% 80%, 30% 80%, 30% 100%, 0% 50%);
+    animation: clips2 6s ease infinite;
+}
+
+@keyframes clips2 {
+  50% {
+    clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+  }
+    
 }
 
 .performance > .seo > h2 {
@@ -1233,12 +1242,7 @@ width="50px" height="50px" fill="#3949ab" viewBox="0 0 120 120" enable-backgroun
       <div class="seo">
        <h3>SEO search engine optimization</h3>
        
-       <video
-       autoplay loop muted preload="auto" playsinline
-       width="100"
-       src="./assets/img/Seo.mp4">
-     </video>
-    
+      <img src="./assets/img/seo.jpg" alt="SEO search engine optimization">
       
       
         <p>SEO is the implementation of methods and design practises that follow search engine guidelines for a website to rank optimally. Organic search, is ranking in the search engine for particular keywords without the use of paid ads.</p>
