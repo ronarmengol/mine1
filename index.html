@@ -248,8 +248,23 @@ section.intro2 > article {
 section.intro2 img{
     max-width: 600px;
     width: 100%;
-    height: auto;
+
+    height: 400px;
+    object-fit: none;
+    object-position: 0% 0%;
+    /* background-repeat: repeat; */
+    animation: move-sky 20s linear infinite;
   }
+
+  
+  @keyframes move-sky {
+      0% {
+          object-position: 0% 0%;
+      }
+      100% {
+          object-position: 100% 0%;
+      }
+    }
   
   section.intro2 video {
     max-width: 600px;
@@ -947,11 +962,13 @@ footer > div > p {
       <section class="intro2">
         <aside>
             <img loading="lazy" 
-            width="400"
-            height="279"
-            src="./assets/img/clouds.jpg" 
+            width="640"
+            height="360"
+            src="./assets/img/clouds2.jpg" 
             alt="web design boost of power" 
             title="design boost zambia">
+
+            
         </aside>
         
         <article>
