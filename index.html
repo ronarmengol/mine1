@@ -548,9 +548,11 @@ section.website + h3 {
     text-align: center;
 }
 
-.section7 video {
-    max-width: 400px;
+.section7 img {
+    /* object-fit: cover; */
     width: 100%;
+    max-width: 800px;
+    height: auto;
     display: block;
     margin: 1rem auto;
 }
@@ -674,10 +676,10 @@ section.website + h3 {
     position: relative;
     width: 100%;
     clip-path: polygon(30% 0, 30% 20%, 100% 20%, 100% 80%, 30% 80%, 30% 100%, 0% 50%);
-    animation: clips2 6s ease infinite;
+    animation: clips3 6s ease infinite;
 }
 
-@keyframes clips2 {
+@keyframes clips3 {
   50% {
     clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
   }
@@ -1121,10 +1123,9 @@ width="50px" height="50px" fill="#3949ab" viewBox="0 0 120 120" enable-backgroun
       <h2>Web development</h2>
       <h2 class="none">seo web designer developer Zambia design seo</h2>
 
-      <video
-        autoplay loop muted preload="auto" playsinline
-        width="100"
-        src="./assets/img/website-build.mp4"></video>
+      <img 
+      loading="lazy" 
+      src="./assets/img/web-development.svg" alt="web development zambia africa">
     </section>
 
 
