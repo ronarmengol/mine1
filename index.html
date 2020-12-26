@@ -369,21 +369,23 @@ section.intro3 {
   position: relative;
 }
 
+section.intro3 h3 {
+    text-align: center;
+    font-size: 2.4rem;
+    margin-bottom: 3vw;
+}
+
 section.intro3 > img {
-  position: absolute;
-  opacity: 0.05;
+  opacity: 1;
   z-index: -1;
   width: 100%;
   display: block;
   max-width: 250px;
   height: auto;
+  position: relative;
   left: 50%;
   transform: translateX(-50%);
 
-}
-section.intro3 h3 {
-    text-align: center;
-    font-size: 2.4rem;
 }
 
 section.intro3 p {
@@ -1023,12 +1025,12 @@ footer > div > p {
   </section>
       
   <section class="intro3">
+    <h3>How can I help you?</h3>
     <img 
       loading="lazy"
       width="676"
       height="599"
-      src="./assets/img/help.png" alt="web-design-graphic">
-    <h3>How can I help you?</h3>
+      src="./assets/img/smart-design.svg" alt="web-design-graphic">
     <p>I will produce a stable, safe, fast, responsive web site for your business or personal application. It will not be a standalone work on photoshop but it will be a working, online web site which can be discovered by Google with the relevant keywords.</p>
 </section>
 
@@ -1190,7 +1192,7 @@ width="50px" height="50px" fill="#3949ab" viewBox="0 0 120 120" enable-backgroun
         <p>The second look: will be the images will be cropped and text will be overflowing on the horizontal axis. The user has to scroll left and right to read the text and see the complete image. This is not a pleasant user experience.</p>
         <p>This can be solved by using a grid layout and media queries breakpoints. The responsive grid layout will force the content that is stacked horizontally to be stacked vertically. So there will be no need for the user to scroll left and right. Media queries, is a css function that can test the width of the viewport, if the viewport is the size of a mobile device, it can instruct the browser to load a mobile version of the image.</p>
         
-        <p class="nojustify">
+        <p>
           Webpage responsiveness is a Google ranking factor
         </p> 
       </div>
