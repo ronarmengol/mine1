@@ -179,39 +179,10 @@ header + span {
 
 section.intro1 {
   position: relative;
-  background-color: #263238;
+  /* background-color: #263238; */
+  background-color: #000;
   padding: 8rem 0 ;
   
-}
-section.intro1 > div:nth-of-type(1) {
-  overflow-x: hidden;
-  position: absolute;
-  background-color: #fff176;
-  border-radius: 50%;
-  width: 80%;
-  max-width: 600px;
-  height: 90%;
-  opacity: 0.1;
-  z-index: -1;
-  top: -5vw;
-  left: 10%;
-  transform: translateX(-50%);
-  animation: zoom 8s infinite linear;
-
-}
-
-
-
-@keyframes zoom {
-  from {
-    transform: scale(0.1);
-    opacity: 0.3;
-  }
-
-  to {
-    transform: scale(1);
-    opacity: 0;
-  }
 }
 
 section.intro1 > h2 {
@@ -223,6 +194,28 @@ section.intro1 > h2 {
   font-weight: 400;
   text-align: center;
   color: #fff;
+  
+}
+
+section.intro1 > h2 > span.shine {
+
+  position: relative;
+  overflow-x: hidden;
+  background: linear-gradient(90deg, #000, #fff, yellow, red);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 3s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
 }
 
 section.intro1 > h3 {
@@ -947,7 +940,7 @@ footer > div > p {
 
     <main>
       <section class="intro1">
-        <h2>Move into the future go online <span class="none">seo web designer developer Zambia design</span></h2>
+        <h2>Move into the future <span class="shine">go online</span><span class="none">seo web designer developer Zambia design</span></h2>
         <h3>Make your business <span id="heading1">visible</span></h3>
       </section>
 
@@ -1435,7 +1428,7 @@ width="50px" height="50px" fill="#3949ab" viewBox="0 0 120 120" enable-backgroun
               if (headerCount > 6) {
                   headerCount = 0;
               }
-          }, 4000);
+          }, 2500);
 
         </script>
         
