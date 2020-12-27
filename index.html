@@ -684,13 +684,16 @@ section.website + h3 {
   .performance > .seo > img {
     position: relative;
     width: 100%;
-    clip-path: polygon(30% 0, 30% 20%, 100% 20%, 100% 80%, 30% 80%, 30% 100%, 0% 50%);
+    /* clip-path: polygon(30% 0, 30% 20%, 100% 20%, 100% 80%, 30% 80%, 30% 100%, 0% 50%); */
+    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 60% 91%, 50% 100%, 40% 90%, 0 90%);
     animation: clips3 6s ease infinite;
 }
 
 @keyframes clips3 {
   50% {
-    clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+    /* clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%); */
+
+    clip-path: polygon(40% 10%, 50% 0, 60% 10%, 100% 10%, 100% 100%, 0 100%, 0 10%);
   }
     
 }
@@ -716,15 +719,30 @@ section.website + h3 {
 
 .building h2 {
     font-size: clamp(1.5rem, 6vw, 4rem);
-    text-align: center;
     margin-bottom: 2vw;
+    text-align: center;
 }
 
 .building > img {
-    display: block;
-    margin: 0 auto;
-    max-width: 800px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+    max-width: 600px;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: 50% 100%;
+
+    animation: move-sky1 20s linear infinite alternate;
 }
+@keyframes move-sky1 {
+      0% {
+          object-position: 50% 100%;
+      }
+      100% {
+          object-position: 50% 0%;
+      }
+    }
 
 .building > p:nth-of-type(1) {
     text-align: center;
@@ -1286,7 +1304,9 @@ width="50px" height="50px" fill="#3949ab" viewBox="0 0 120 120" enable-backgroun
       <h2>Cost of building up a website</h2>
       <img 
         loading="lazy"
-        src="./assets/img/web-development.svg" alt="website building">
+        src="./assets/img/building2.jpg" alt="website building">
+
+      
       <p>There are 3 main costs to starting up your website:
         The web designer, the domain name and hosting.
         
