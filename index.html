@@ -641,28 +641,27 @@ section.website + h3 {
     font-size: clamp(1rem, 4vw, 1.4rem);
 }
 
-.animated {
-  
-  border-top: 5px solid lightblue;
+.animated-hr {
+  margin:auto;
+  border-top: 15px solid blue;
   width: 0%;
-  animation: hr-move 5s ease infinite forwards;
+  animation: move-hr 5s linear infinite alternate;
 }
 
-.animated.right {
-margin-right: 0;
+.animated-hr.right {
+  margin-right: 0;
 }
 
-.animated.left {
+.animated-hr.left {
 margin-left: 0;
 }
 
-@keyframes hr-move {
-100% {
-  width: 100%;
-  border-top: 10px solid blue;
+@keyframes move-hr {
+    100% {
+    width: 100%;
+    border-top: 15px solid blue;
+    }
 }
-}
-
 
 .performance > .responsive {
     max-width: 900px;
@@ -1252,9 +1251,9 @@ width="50px" height="50px" fill="#3949ab" viewBox="0 0 120 120" enable-backgroun
 
     <section class="performance">
       <div class="intro">
-        <hr class="animated left">
+        <hr class="animated-hr left">
         <h2>Web performance</h2>
-        <hr class="animated right">
+        <hr class="animated-hr right">
 
         <p id="cool1">
           Google does not rank websites based on its goods looks and aesthetic design. Google factors in other technical essentials for the website to rank optimally in their search engine.
