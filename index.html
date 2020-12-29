@@ -632,13 +632,38 @@ section.website + h3 {
 
 .performance > .intro > h2 {
     font-size: clamp(2.0rem, 7vw, 5rem);
-    margin-bottom: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
     text-align: center;
 }
 
 .performance > .intro > p {
     font-size: clamp(1rem, 4vw, 1.4rem);
 }
+
+.animated {
+  
+  border-top: 5px solid lightblue;
+  width: 0%;
+  animation: hr-move 5s ease infinite forwards;
+}
+
+.animated.right {
+margin-right: 0;
+}
+
+.animated.left {
+margin-left: 0;
+}
+
+@keyframes hr-move {
+100% {
+  width: 100%;
+  border-top: 10px solid blue;
+}
+}
+
+
 .performance > .responsive {
     max-width: 900px;
     margin: 0 auto;
@@ -838,7 +863,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60vh;
+    height: 80vh;
 }
 
 
@@ -851,22 +876,10 @@ footer img {
     top: 0;
     z-index: -1;
     opacity: 1;
-    animation: move-abstract 10s linear infinite alternate;
+    animation: move-abstract 30s linear infinite alternate;
       
 }
 
-.building > div > img {
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-    max-width: 600px;
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    object-position: 50% 100%;
-
-    animation: move-sky1 20s linear infinite alternate;
-}
 @keyframes move-abstract {
       0% {
           object-position: 50% 100%;
@@ -961,6 +974,11 @@ footer > div > p {
         width: 100%;
     }
 
+    footer img {
+    height: 100%;
+    animation: move-abstract 5s linear infinite alternate;
+      
+}
 
 }
 
@@ -1234,8 +1252,10 @@ width="50px" height="50px" fill="#3949ab" viewBox="0 0 120 120" enable-backgroun
 
     <section class="performance">
       <div class="intro">
-
+        <hr class="animated left">
         <h2>Web performance</h2>
+        <hr class="animated right">
+
         <p id="cool1">
           Google does not rank websites based on its goods looks and aesthetic design. Google factors in other technical essentials for the website to rank optimally in their search engine.
         </p>
