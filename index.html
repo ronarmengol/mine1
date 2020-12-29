@@ -486,6 +486,56 @@ section.website + h3 {
     text-align: center;
 }
 
+.blob1 {
+
+display: flex;
+align-content: center;
+align-items: center;
+justify-content: center;
+max-width: 200px;
+height: 150px;
+padding: 0 0 0 40px;
+margin: 0 auto;
+background-color: #21D4FD;
+background-image: linear-gradient(15deg, #21D4FD 0%, #B721FF 100%);
+border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+box-shadow: 15px 15px 50px rgba(0,0,0,0.2);
+animation: morphing 5s infinite alternate;
+overflow: hidden;
+}
+.blob1:hover {
+
+  animation-play-state: paused;
+  }
+
+.blob1 > h3{
+
+font-family: Arial, Helvetica, sans-serif;
+color: white;
+font-weight: 600;
+font-size: 35px;
+line-height: 100%;
+text-transform: uppercase;
+letter-spacing: 0.02em;
+margin: 0 auto;
+}
+@keyframes morphing {
+		0% {
+			border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+			box-shadow: 15px 15px 50px rgba(0,0,0,0.2);
+		}
+		25% { 
+			border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%;
+		}
+		50% {
+			border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%;
+			box-shadow: -10px -5px 50px rgba(0,0,0,0.2);
+		}
+		75% {
+			border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;		
+		}
+	}
+
 .section5 {
     display: flex;
     justify-content: center;
@@ -862,7 +912,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    height: 100vh;
 }
 
 
@@ -871,20 +921,20 @@ footer img {
     position: absolute;
     width: 100%;
     object-fit: cover;
-    object-position: center center;
+    /* object-position: 0% 100%; */
     top: 0;
     z-index: -1;
     opacity: 1;
-    animation: move-abstract 30s linear infinite alternate;
+    animation: move-abstract 40s linear infinite alternate 1s;
       
 }
 
 @keyframes move-abstract {
       0% {
-          object-position: 50% 100%;
+          object-position: 50% 0%;
       }
       100% {
-          object-position: 50% 0%;
+          object-position: 50% 100%;
       }
     }
 
@@ -1172,8 +1222,10 @@ width="50px" height="50px" fill="#3949ab" viewBox="0 0 120 120" enable-backgroun
       </p>
   </article>
 </section>
+<div class="blob1">
 
-<h3>Basic plan</h3>
+  <h3>Basic plan</h3>
+</div>
 <section class="section5">
       <img 
         width="676"
