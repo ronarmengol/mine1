@@ -77,6 +77,20 @@ body {
 
 }
 
+.fancy {
+	animation: appear 3s linear forwards;
+}
+
+ @keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
 header {
     height: 100vh;
     width: 100%;
@@ -1163,7 +1177,7 @@ footer > div > p {
         </aside>
         
         <article>
-            <h4>Get a digital boost</h4>
+            <h4 class="animate-me fancy appear">Get a digital boost</h4>
             <p>I am a web designer and web developer, commonly known as a front end developer. Grow your brand strength with strong and impressionable designs. Keep up with the future in investing in digital online marketing. Rank on the top pages of Google search for your business keywords.</p>
         </article>
     </section>
@@ -1173,7 +1187,7 @@ footer > div > p {
       src="./assets/img/website-startup.svg" 
       alt="web developer office">
       
-      <article class="articles1">
+      <article class="articles1 animate-me fancy appear">
           <h2>Rank with Google</h2>
 
           <div>
@@ -1194,7 +1208,7 @@ footer > div > p {
   </section>
       
   <section class="intro3">
-    <h3>How can I help you?</h3>
+    <h3 class="animate-me fancy appear">How can I help you?</h3>
     <img 
       loading="lazy"
       width="676"
@@ -1606,13 +1620,13 @@ footer > div > p {
       <!-- <script defer src="//instant.page/5.1.0" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script> -->
       
       <script defer>
-        // const options = {
-        //   root: null,
-        //   rootMargin: '0px',
-        //   threshold: 0.5
-        // }
+        const options = {
+          root: null,
+          rootMargin: '0px',
+          threshold: 0.5
+        }
         
-        const images = document.querySelectorAll('.animate');
+        const images = document.querySelectorAll('.animate-me');
         
         let observer = new IntersectionObserver((entries) => {
           entries.forEach(entry => {
