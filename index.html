@@ -472,13 +472,19 @@ section.intro3 p {
     font-size: 1.1rem;
 }
 
-.website .article2 svg {
-    transform: rotate(0);
-    transition: 1s;
+
+.website article:nth-of-type(1) > img {
+  width: 50px;
+}
+ 
+.website article:nth-of-type(2) svg {
+  animation: turnaround 2s linear infinite;
 }
 
-.website .article2 svg:hover {
+@keyframes turnaround {
+  100% {
     transform: rotate(360deg);
+  }
 }
 
 section.website + h3 {
@@ -1181,15 +1187,10 @@ footer > div > p {
 
 <section class="website">
   <article>
-      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-width="50px" height="50px" fill="#3949ab" viewBox="0 0 120 120" enable-background="new 0 0 120 120" xml:space="preserve">
-<rect x="2" y="108.1" width="116" height="11.9"/>
-<rect x="6.744" y="96.582" width="104.979" height="6.543"/>
-<rect x="15.288" y="38.532" width="17.639" height="52.925"/>
-<rect x="50.484" y="38.532" width="17.639" height="52.925"/>
-<rect x="84.33" y="38.532" width="17.639" height="52.925"/>
-<polygon points="0,26.96 60,0 120,26.96 119.946,33.912 0,34.01 "/>
-</svg>
+    <img loading="lazy"
+    width="100"
+    height="102"
+    src="./assets/img/building-icon.webp" alt="stable and strong website">
       <h3>stable</h3>
       <p>
           This website has been built with HTML, CSS and Javascript. There are no third party plugins. Unexpected updates in third party plugins can destabilise websites. This means this website once created requires minimal maintenance.
