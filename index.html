@@ -654,29 +654,58 @@ margin: 0 auto;
     margin: 4rem auto 2rem;
 }
 
-
 .section7 h2 {
     font-size: clamp(2rem, 5vw, 4rem);
     text-align: center;
 }
 
-.section7 img {
+.section7 div {
+  position: relative;
+  overflow: hidden;
+}
+.section7 div > img:nth-of-type(1) {
+    object-fit: cover;
+    width: 100%;
+    max-width: 800px;
+    height: 60vh;
+    display: block;
+    margin: 1rem auto;
+    clip-path: inset(0 55% 0 55%);
+    animation: clip2 10s ease infinite;
+    position: relative;
+    top: 0;
+    opacity: 1;
+}
+.section7 div > img:nth-of-type(2) {
     /* object-fit: cover; */
     width: 100%;
     max-width: 800px;
-    height: auto;
+    height: 60vh;
     display: block;
     margin: 1rem auto;
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    animation: clip2 6s ease infinite;
+    top: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    clip-path: inset(0 0 0 0);
+    animation: clip3 10s ease infinite;
+
+    z-index: -1;
 }
 
 
 @keyframes clip2 {
   50% {
-    clip-path: polygon(50% 100%, 0 0, 100% 0);
+    clip-path: inset(0 0 0 0);
   }
 }
+@keyframes clip3 {
+  50% {
+    clip-path: inset(0 50% 0 50%);
+  }
+}
+
+
 .section8 .developer {
     display: flex;
     flex-wrap: wrap;
@@ -1377,10 +1406,17 @@ footer > div > p {
     <section class="section7">
       <h2>Web development</h2>
       <h2 class="none">seo web designer developer Zambia design seo</h2>
+      <div>
 
-      <img 
-      loading="lazy" 
-      src="./assets/img/web-development.svg" alt="web development zambia africa">
+        <img 
+        loading="lazy" 
+        src="./assets/img/building1.jpg" alt="web development zambia africa">
+        
+        <img 
+        loading="lazy" 
+        src="./assets/img/building3.webp" alt="web development zambia africa">
+
+      </div>
     </section>
 
 
