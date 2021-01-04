@@ -259,6 +259,55 @@ section.intro1 > h3 {
   margin-top: 5vw;
 }
 
+section.lion {
+  height: 100vh;
+  animation: change-color 10s linear infinite;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+section.lion img {
+  object-fit: cover;
+  height: 100vh;
+  width: 100%;
+  mix-blend-mode: luminosity;
+}
+
+section.lion h2 {
+  color: #fff;
+  /* width: 100%; */
+  text-align: center;
+  display: block;
+  opacity: 0.8;
+  font-size: clamp(2rem, 5vw, 15rem);   
+  position: absolute;
+  z-index: 10;
+  /* animation: change-color 10s linear infinite; */
+}
+@keyframes change-color {
+      0% {
+          background-color: rgba(255, 0, 179, 0.788);
+      }
+      25% {
+      background-color: rgba(0, 68, 255, 0.671);
+
+      }
+      50% {
+      background-color: rgba(255, 0, 0, 0.671);
+          
+      }
+      75% {
+      background-color: rgba(0, 255, 0, 0.671);
+
+      }
+      100% {
+      background-color: rgba(241, 13, 165, 0.863);
+
+      }
+  }
+
+
 section.intro2 {
     display: flex;
     background-color: #010936;
@@ -1273,6 +1322,12 @@ footer > div > p {
         <h3>Make your business <span id="heading1">visible</span></h3>
       </section>
 
+      <section class="lion">
+        <h2>Strong design</h2>
+        <img loading="lazy"
+        src="./assets/img/lion-face3.webp" alt="strong design">
+      </section>
+
       <section class="intro2">
         <aside>
             <img loading="lazy" 
@@ -1358,7 +1413,6 @@ footer > div > p {
   </article>
 
   <article>
-      <!-- <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path d="M13.707,2.293C13.52,2.105,13.266,2,13,2H6C4.897,2,4,2.897,4,4v16c0,1.103,0.897,2,2,2h12c1.103,0,2-0.897,2-2V9 c0-0.266-0.105-0.52-0.293-0.707L13.707,2.293z M6,4h6.586L18,9.414l0.002,9.174l-2.568-2.568C15.784,15.425,16,14.739,16,14 c0-2.206-1.794-4-4-4s-4,1.794-4,4s1.794,4,4,4c0.739,0,1.425-0.216,2.02-0.566L16.586,20H6V4z M12,16c-1.103,0-2-0.897-2-2 s0.897-2,2-2s2,0.897,2,2S13.103,16,12,16z"/></svg> -->
       <img loading="lazy"
       width="100"
       height="102"
@@ -1407,11 +1461,13 @@ footer > div > p {
       <h2>Web development</h2>
       <h2 class="none">seo web designer developer Zambia design seo</h2>
       <div>
-
-        <img 
-        loading="lazy" 
-        src="./assets/img/building1.webp" alt="web development zambia africa">
         
+
+          <img 
+          loading="lazy" 
+          src="./assets/img/building1.webp" alt="web development zambia africa">
+        
+          
         <img 
         loading="lazy" 
         src="./assets/img/building3.webp" alt="web development zambia africa">
