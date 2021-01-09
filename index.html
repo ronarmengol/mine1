@@ -337,6 +337,7 @@ section.lion h2 {
   }
 
   .supernova-img {
+    object-fit: cover;
     border-radius: 50%;
             width: 1000px;
             height: 1000px;
@@ -1955,15 +1956,15 @@ footer > div > p {
         
         <script defer>
             window.addEventListener('load', function() {
-              let lion = document.getElementById('lion');
+              const lion = document.getElementById('lion');
               lion.classList.add('lion-img');
               lion.src="./assets/img/lion-face3.webp";
               
-              let man = document.getElementById('man');
+              const man = document.getElementById('man');
               man.classList.add('man-img');
               man.src="./assets/img/man1.webp";
               
-              let supernova = document.getElementById('supernova');
+              const supernova = document.getElementById('supernova');
               supernova.classList.add('supernova-img');
               supernova.src="./assets/img/idea.webp";
 
