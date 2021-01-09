@@ -127,7 +127,7 @@ header {
     z-index: -1;
 
 } */
-header > video {
+/* header > video {
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -136,6 +136,7 @@ header > video {
   top: 0;
   z-index: -1;
   opacity: 1;
+}  */
 
     /* width: 100%;   
     height: 100%;
@@ -144,7 +145,6 @@ header > video {
     opacity: 1;
     z-index: -1; */
 
-} 
 
 /* header > picture > img {
     width: 100%;
@@ -267,7 +267,7 @@ section.lion {
   justify-content: center;
 }
 
-section.lion img {
+.lion-img {
   object-fit: cover;
   height: 100vh;
   width: 100%;
@@ -330,13 +330,13 @@ section.lion h2 {
     overflow: hidden;
   }
 
-  section.inspired img {
+  .man-img {
     width: 100%;
             height: 100vh;
             object-fit: cover;
   }
 
-  section.inspired img:nth-of-type(2) {
+  .supernova-img {
     border-radius: 50%;
             width: 1000px;
             height: 1000px;
@@ -368,12 +368,12 @@ section.lion h2 {
         }
 
         @media screen and (max-width: 700px){
-            section.inspired img:nth-of-type(2) {
+            .supernova-img {
                 left: 0%;
             }
         }
         @media screen and (max-width: 500px){
-            section.inspired img:nth-of-type(2) {
+            .supernova-img {
                 left: -40%;
             }
         }
@@ -1397,8 +1397,10 @@ footer > div > p {
 
       <section class="lion">
         <h2>Strong design</h2>
-        <img loading="lazy"
-        src="./assets/img/lion-face3.webp" alt="strong design">
+        <img id='lion' 
+        width="1920" 
+        height="1280"
+        alt="strong design">
       </section>
 
       <section class="inspired-intro">
@@ -1407,15 +1409,15 @@ footer > div > p {
       </section>
 
       <section class="inspired">
-        <img 
+        <img id='man'
         width="1920"
         height="1280"
-        loading="lazy" src="./assets/img/man1.webp" alt="">
+        alt="inspired man design">
 
-        <img
+        <img id='supernova'
         width="960"
         height="540"
-        loading="lazy" src="./assets/img/idea.webp" alt="">
+        alt="inspired design">
         
       </section>
 
@@ -1951,6 +1953,24 @@ footer > div > p {
 
         </script>
         
+        <script defer>
+            window.addEventListener('load', function() {
+              let lion = document.getElementById('lion');
+              lion.classList.add('lion-img');
+              lion.src="./assets/img/lion-face3.webp";
+              
+              let man = document.getElementById('man');
+              man.classList.add('man-img');
+              man.src="./assets/img/man1.webp";
+              
+              let supernova = document.getElementById('supernova');
+              supernova.classList.add('supernova-img');
+              supernova.src="./assets/img/idea.webp";
+
+              
+
+            });
+        </script>
 
 </body>
 </html>
