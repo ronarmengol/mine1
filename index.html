@@ -401,7 +401,7 @@ section.intro2 > article {
   flex: 1 1 50%;
 }
 
-section.intro2 img{
+.clouds-img{
     max-width: 600px;
     width: 100%;
 
@@ -1320,7 +1320,7 @@ footer > div > p {
 
     <meta property="og:title" content="how to make a website" />
     <meta property="og:url" content="https://ronarmengol1.netlify.app/index.html" />
-    <meta property="og:image" content="https://ronarmengol1.netlify.app/assets/img/eagle.gif" />
+    <meta property="og:image" content="https://ronarmengol1.netlify.app/assets/img/lion-face3.webp" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content="website info" />
     
@@ -1419,10 +1419,9 @@ footer > div > p {
 
       <section class="intro2">
         <aside>
-            <img loading="lazy" 
+            <img id="clouds" 
             width="640"
             height="360"
-            src="./assets/img/clouds4.webp" 
             alt="web design boost of power" 
             title="design boost zambia">
 
@@ -1961,14 +1960,9 @@ footer > div > p {
               supernova.classList.add('supernova-img');
               supernova.src="./assets/img/idea.webp";
 
-
-
-     
-              import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
-    
-    const el = document.createElement('pwa-update');
-    document.body.appendChild(el);
-              
+              const clouds = document.getElementById('clouds');
+              clouds.classList.add('clouds-img');
+              clouds.src="./assets/img/clouds4.webp";
 
             });
         </script>
