@@ -752,14 +752,23 @@ margin: 0 auto;
     height: 100%;
 }
 
-.section5 > img {
+canvas {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* .section5 > img {
     position: absolute;
     width: 90%;
     height: 110vh;
     opacity: 0.15;
     z-index: -1;
     top: -50%;
-}
+} */
 
 .section5 .text {
     margin-top: 2rem;
@@ -1540,11 +1549,13 @@ footer > div > p {
   <h3>Basic plan</h3>
 </div>
 <section class="section5">
-      <img 
+
+  <canvas id="canvas1"></canvas>
+      <!-- <img 
         width="676"
         height="599"
         loading="lazy"
-        src="./assets/img/graphic-design.png" alt="graphic design">
+        src="./assets/img/graphic-design.png" alt="graphic design"> -->
 
 
         <article>
@@ -2008,6 +2019,69 @@ footer > div > p {
               })
 
             }); 
+
+
+            const canvas = document.getElementById('canvas1');
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+let numberOfParticles = 20;
+const particlesArray = [];
+
+class Particle {
+    constructor(){
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.radius = (Math.random() * 10) + 2;
+        this.speedX = (Math.random() * 3) - 1.5;
+        this.speedY =  (Math.random() * 3) - 1.5;
+    }
+    draw(){
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.fillStyle = 'red';
+        ctx.fill();
+        ctx.strokeStyle = 'black';
+        ctx.stroke();
+    }
+    update(){
+        this.x += this.speedX;
+        this.y += this.speedY;
+        if (this.x + this.radius > canvas.width ||
+            this.x - this.radius < 0){
+                this.speedX = -this.speedX;
+        }
+        if (this.y + this.radius > canvas.height ||
+            this.y + this.radius < 0){
+                this.speedY = -this.speedY;
+        }
+        this.draw();
+    }
+}
+function init(){
+    for (let i = 0; i < numberOfParticles; i++){
+        particlesArray.push(new Particle());
+    }
+}
+function animate(){
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for (let i = 0; i < particlesArray.length; i++){
+        particlesArray[i].update();
+    }
+    requestAnimationFrame(animate);
+}
+init();
+animate();
+
+window.addEventListener('resize', function(){
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  particlesArray = [];
+  init();
+})
+
+
+
         </script>
 
 <script type="module" >
