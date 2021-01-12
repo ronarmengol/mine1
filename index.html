@@ -283,10 +283,11 @@ section.intro1 > h3 {
 
 section.lion {
   height: 100vh;
-  animation: change-color 10s linear infinite;
+  animation: change-color 7s linear infinite;
   position: relative;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .lion-img {
@@ -297,7 +298,10 @@ section.lion {
 }
 
 section.lion h2 {
-  color: #fff;
+  background: white;
+
+  color: black;
+  mix-blend-mode: screen;
   /* width: 100%; */
   text-align: center;
   display: block;
@@ -2242,7 +2246,7 @@ function Particle1(x, y) {
   
   // To simulate a trail effect, the last few coordinates will be stored
   this.coordinates = [];
-  this.coordinateCount = 5;
+  this.coordinateCount = 10;
   
   // Populate coordinate array with initial data
   while(this.coordinateCount--) {
@@ -2329,7 +2333,6 @@ canvas2.addEventListener('mousemove', function(e) {
 canvas2.addEventListener('mousedown', function(e) {
   e.preventDefault();
   mouse.down = true;
-  console.log(e);
 });
 
 canvas2.addEventListener('mouseup', function(e) {
@@ -2384,6 +2387,8 @@ function gameLoop() {
   if(clickLimiterTick >= options1.clickLimiter) {
     if(mouse.down) {
       fireworks.push(new Firework(canvasWidth / 2, canvasHeight, mouse.x, mouse.y));
+  console.log(mouse);
+
       clickLimiterTick = 0;
     }
   } else {
@@ -2391,7 +2396,9 @@ function gameLoop() {
   }
 }
 
-gameLoop();
+window.onload = gameLoop();
+
+
 </script>
 <script type="module" >
       
