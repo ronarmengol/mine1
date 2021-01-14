@@ -1982,8 +1982,15 @@ footer > div > p {
             window.addEventListener('load', function() {
               const lion = document.getElementById('lion');
               lion.classList.add('lion-img');
-              lion.src="./assets/img/lion-face3.webp";
+              lion.src="./assets/img/lion-design-blur.webp";
               
+
+              lion.onload = function () {
+                setTimeout(() => {
+                  lion.src='./assets/img/lion-face3.webp';
+                }, 2000);
+              }
+
               const man = document.getElementById('man');
               man.classList.add('man-img');
               man.src="./assets/img/man1.webp";
