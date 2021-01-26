@@ -2,68 +2,80 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://ronarmengol1.netlify.app/</loc>
-    <lastmod>2020-12-17</lastmod>
+    <lastmod>2021-01-26</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-      <image:image>
-        <image:loc>https://ronarmengol1.netlify.app/assets/img/eagle.gif</image:loc>
-        <image:title>web design eagle</image:title>
-      </image:image>
-      <image:image>
-        <image:loc>https://ronarmengol1.netlify.app/assets/img/clouds.jpg</image:loc>
-        <image:title>web design boost of power</image:title>
-      </image:image>
+    <priority>1.0</priority>
       <image:image>
         <image:loc>https://ronarmengol1.netlify.app/assets/img/website-startup.svg</image:loc>
         <image:title>web developer office</image:title>
       </image:image>
       <image:image>
-        <image:loc>https://ronarmengol1.netlify.app/assets/img/help.png</image:loc>
-        <image:title>web-design-graphic</image:title>
+        <image:loc>https://ronarmengol1.netlify.app/assets/img/building-icon.webp</image:loc>
+        <image:title>stable and strong website</image:title>
       </image:image>
       <image:image>
-        <image:loc>https://ronarmengol1.netlify.app/assets/img/graphic-design.png</image:loc>
-        <image:title>graphic design</image:title>
+        <image:loc>https://ronarmengol1.netlify.app/assets/img/web-seo-icon.webp</image:loc>
+        <image:title>stable and strong website</image:title>
       </image:image>
       <image:image>
-        <image:loc>https://ronarmengol1.netlify.app/assets/img/web-development.svg</image:loc>
+        <image:loc>https://ronarmengol1.netlify.app/assets/img/building1.webp</image:loc>
+        <image:title>web development zambia africa</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>https://ronarmengol1.netlify.app/assets/img/building3.webp</image:loc>
+        <image:title>web development zambia africa</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>https://ronarmengol1.netlify.app/assets/img/road1.webp</image:loc>
+        <image:title></image:title>
+      </image:image>
+      <image:image>
+        <image:loc>https://ronarmengol1.netlify.app/assets/img/lambo2.png</image:loc>
+        <image:title></image:title>
+      </image:image>
+      <image:image>
+        <image:loc>https://ronarmengol1.netlify.app/assets/img/seo.jpg</image:loc>
+        <image:title>SEO search engine optimization</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>https://ronarmengol1.netlify.app/assets/img/building2.jpg</image:loc>
         <image:title>website building</image:title>
       </image:image>
   </url>
   <url>
     <loc>https://ronarmengol1.netlify.app/blogs/freelancer-vs-agency.html</loc>
-    <lastmod>2020-12-17</lastmod>
+    <lastmod>2021-01-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ronarmengol1.netlify.app/blogs/blogindex.html</loc>
+    <lastmod>2021-01-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ronarmengol1.netlify.app/blogs/blogindex.html</loc>
-    <lastmod>2020-12-17</lastmod>
+    <loc>https://ronarmengol1.netlify.app/blogs/meta-tags.html</loc>
+    <lastmod>2021-01-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ronarmengol1.netlify.app/blogs/meta-tags.html</loc>
-    <lastmod>2020-12-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://ronarmengol1.netlify.app/blogs/seo.html</loc>
-    <lastmod>2020-12-17</lastmod>
+    <lastmod>2021-01-26</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://ronarmengol1.netlify.app/blogs/11-reasons-why-you-need-a-website-kitwe-zambia.html</loc>
-    <lastmod>2020-12-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ronarmengol1.netlify.app/blogs/10-points-that-make-a-great-website-kitwe-zambia.html</loc>
-    <lastmod>2020-12-17</lastmod>
+    <lastmod>2021-01-26</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ronarmengol1.netlify.app/blogs/11-reasons-why-you-need-a-website-kitwe-zambia.html</loc>
+    <lastmod>2021-01-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>
