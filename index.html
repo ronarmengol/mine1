@@ -2197,7 +2197,7 @@ const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 let numberOfParticles = 20;
-const particlesArray = [];
+let particlesArray = [];
 
 class Particle {
     constructor(){
@@ -2494,8 +2494,8 @@ function createParticles(x, y) {
 
 // Add an event listener to the window so we're able to react to size changes
 window.addEventListener('resize', function(e) {
-  canvas2.width = canvasWidth = window.innerWidth;
-  canvas2.height = canvasHeight = window.innerHeight;
+  canvas2.width = window.innerWidth;
+  canvas2.height = window.innerHeight;
 });
 
 // Add event listeners to the canvas to handle mouse interactions
