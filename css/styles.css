@@ -279,40 +279,6 @@ section.website + h3 {
     margin: 4rem auto 5rem;
 }
 
-.build > h2 {
-    text-align: center;
-    font-size: clamp(2rem, 7vw, 3.5rem);   
-    margin-bottom: 5rem;
-}
-
-.build > p {
-    padding: 1rem;
-    font-size: clamp(1.3rem, 3vw, 1.8rem);   
-}
-
-.bootstrap > h2 {
-    text-align: center;
-    font-size: clamp(2rem, 7vw, 3.5rem);   
-    margin-bottom: 5rem;
-    
-}
-
-.bootstrap > p {
-    padding: 1rem;
-    font-size: clamp(1.3rem, 3vw, 1.8rem);   
-}
-
-.typography > h2 {
-    text-align: center;
-    font-size: clamp(2rem, 7vw, 3.5rem);   
-    margin-bottom: 5rem;
-    
-}
-
-.typography > p {
-    padding: 1rem;
-    font-size: clamp(1.3rem, 3vw, 1.8rem);   
-}
 
 .foot2 {
     display: flex;
