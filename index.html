@@ -291,6 +291,38 @@ section.intro1 > h3 {
   margin-top: 5vw;
 }
 
+.typed-text {
+        color: #00e676;
+
+    }
+
+.cursor {
+    display: inline-block;
+    /* width: 10.5px; */
+    background-color: #00e676;
+    /* margin-left: 0.5rem; */
+    animation: blink 1s infinite;
+}
+  
+  /* .cursor.typing { 
+      animation: none;
+  } */
+  @keyframes blink {
+            0% {
+                background-color: #fff;
+            }
+
+            50% {
+                background-color: transparent;
+            }
+
+            100% {
+                background-color: #fff;
+            }
+
+
+        }
+
 section.lion {
   height: 100vh;
   animation: change-color 7s linear infinite;
@@ -1457,7 +1489,9 @@ footer > div > p {
     <main>
       <section class="intro1">
         <h2>Move into the future <span class="shine">go online</span><span class="none">Africa seo web designer developer Zambia design</span></h2>
-        <h3>Make your business <span id="heading1">visible</span></h3>
+        <!-- <h3>Make your business <span id="heading1">visible</span></h3> -->
+
+        <h3><span class='typed-text'></span><span class="cursor typing">&nbsp;</span><span class="none">Web developer designer in Africa Zambia Copperbelt Kitwe design</span></h3>
       </section>
 
       <section class="lion">
@@ -2060,7 +2094,7 @@ window.addEventListener( 'resize', function(){
         });
         </script>
 
-        <script>
+        <!-- <script>
           let header = document.getElementById('heading1');
           let headings = [
               'go online',
@@ -2080,8 +2114,56 @@ window.addEventListener( 'resize', function(){
                   headerCount = 0;
               }
           }, 2500);
+        </script> -->
 
-        </script>
+<script defer>
+
+  (function () {
+
+      const typedTextSpan = document.querySelector('.typed-text');
+      const textArray = ["Make your business go online", "Make your business approachable", "Make your business admirable", "Make your business respected", "Make your busines the brand", "Make your business discoverable", "Make your business visible"];
+      const typingDelay = 100;
+  const erasingDelay = 30;
+  const newTextDelay = 2000;
+  
+  let textArrayIndex = 0;
+  let charIndex = 0;
+  
+  function type () {
+      if (charIndex < textArray[textArrayIndex].length) {
+          typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+          charIndex++;
+          setTimeout(type, typingDelay);
+      }
+      
+      else {
+          //erase
+          setTimeout(erase, newTextDelay);
+      }
+      
+  }
+  
+  function erase() {
+      if (charIndex > 0) {
+          typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
+          charIndex--;
+          setTimeout(erase, erasingDelay);
+      }
+      else {
+          textArrayIndex++;
+          if (textArrayIndex >= textArray.length) {
+              textArrayIndex = 0;
+          }
+          setTimeout(type, typingDelay + 1100);
+      }
+  }
+  
+  window.addEventListener('load', function() {
+      setTimeout(type, typingDelay + 250);
+  });
+  
+})();
+  </script>
         
         <script defer>
             window.addEventListener('load', function() {
