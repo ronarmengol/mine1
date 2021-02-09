@@ -1405,12 +1405,12 @@ footer > div > p {
         padding: 1rem 2rem;
     }
 
-    .building > div > svg {
+    /* .building > div > svg {
   left: 75%;
   transform: translate(-50%, -50%); 
   width: 30%;
   max-width: 150px;
-}
+} */
 
     .section8 .hosting {
         flex-direction: column;
@@ -1918,12 +1918,47 @@ footer > div > p {
     </footer>
 
     <div class="foot">
-      <p>Ron Armengol &copy 2020</p>
+      <p>Ron Armengol &copy <span id="copy"></span></p>
     </div>
       
       <!-- instant page -->
       <!-- <script defer src="//instant.page/5.1.0" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script> -->
       
+    <script>
+      (function () {
+        window.addEventListener('load', function () {
+          const date = new Date();
+          const copyright = document.getElementById('copy');
+
+          const year = date.getFullYear();
+          const day = date.getDate();
+          const month = date.getMonth();
+
+          let prefix;
+
+          switch (day) {
+            case 1, 21, 31:
+              prefix = 'st';
+              break;
+            
+            case 2, 22:
+              prefix = 'nd';
+              break;
+            
+            case 3, 23:
+              prefix = 'rd';
+              break;
+
+            default:
+              prefix = 'th'
+          }
+
+          const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+          copyright.innerHTML = day + prefix + ' ' + months[month] + ' ' + year;
+        })
+      })();
+    </script>
+
       <script>
         (function () {
 
