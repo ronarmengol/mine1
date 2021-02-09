@@ -1261,18 +1261,29 @@ margin-left: 0;
 }
 
 .foot2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50vh;
+  height: 50vh;
+  position: relative;
+}
+
+.foot2 > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+
 }
 
 .foot2 a{
     color: #e91e63;
     text-decoration: none;
+    width: 300px;
+    height: 144px;
+    border: 2px solid orange;
 }
 
 footer {
+  margin-top: 10rem;
     position: relative;
     display: flex;
     /* display: block; */
@@ -1892,6 +1903,7 @@ footer > div > p {
     </main>
 
     <div class="foot2">
+      <h2>My portfolio</h2>
       <div>
 
         <!-- <a rel="noopener" target="_blank" href="https://website-ndola.netlify.app">website-ndola.netlify.app</a>
@@ -1914,6 +1926,12 @@ footer > div > p {
         <img src="./assets/img/rons-design2.webp" 
         loading="lazy"
         alt="link my design2">
+        </a>
+
+        <a rel="noopener" target="_blank" href="https://rons-design3.netlify.app">
+        <img src="./assets/img/rons-design3.webp" 
+        loading="lazy"
+        alt="link my design3">
         </a>
 
       </div>
