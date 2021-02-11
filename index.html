@@ -1272,7 +1272,24 @@ margin-left: 0;
   margin-bottom: 2rem;
   text-transform: uppercase;
   color: #fff;
+  font-size: 2.7rem;
 
+}
+
+.glow {
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
 }
 
 .foot2 > div {
@@ -1871,7 +1888,7 @@ footer > div > p {
     </main>
 
     <div class="foot2">
-      <h2>My portfolio</h2>
+      <h2 class="glow" >My portfolio</h2>
       <div>
 
         <!-- <a rel="noopener" target="_blank" href="https://website-ndola.netlify.app">website-ndola.netlify.app</a>
