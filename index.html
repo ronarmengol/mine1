@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     
     
-    <link rel="preconnect" href="https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate" crossorigin="anonymous" />
-    
     
     <link rel="canonical" href="https://ronarmengol1.netlify.app/" />
 
@@ -37,8 +35,10 @@
       Web design designer Africa Zambia Kitwe Copperbelt developer SEO builder
     </title>
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<!-- <link rel="preload" href="./css/styles.css" as="style" onload="this.rel='stylesheet'"> -->
 
 
 
@@ -54,12 +54,13 @@
     
     
     <link rel="icon" type="image/ico" href="./favicon.ico" />
-    
-    
-    
 
-      <!-- <link rel="preconnect" href="https://ronarmengol1.netlify.app/contact.html" />
-      <link rel="preconnect" href="https://ronarmengol1.netlify.app/blog/blogindex.html" /> -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    
+    
+    
 
       <script type="application/ld+json">
         {
@@ -79,64 +80,79 @@
   <body>
     <header class="index__hero">
 
-      <img src="assets/img/batman-1_1024.png" alt="">
-      
-
-
 
 
       <div>
-        <h1>Web designer <span class="none">seo web designer developer Africa Zambia design</span></h1>
-        <h2>Kitwe Zambia</h2>
+        <h1>Designing the extraordinary <span class="none">seo web designer developer Africa Zambia design</span></h1>
+        <h2 id="typed1"></h2>
+      </div>
+      <div>
+        <img src="images/holographic_display.png" alt="">
       </div>
     </header>
 
     <main>
 
 
-
     </main>
       
 
 
-    <script>
-      (function () {
-        window.addEventListener('load', function () {
-          const date = new Date();
-          const copyright = document.getElementById('copy');
-
-          const year = date.getFullYear();
-          const day = date.getDate();
-          const month = date.getMonth();
-
-          let prefix;
-
-          switch (day) {
-            case 1, 21, 31:
-              prefix = 'st';
-              break;
-            
-            case 2, 22:
-              prefix = 'nd';
-              break;
-            
-            case 3, 23:
-              prefix = 'rd';
-              break;
-
-            default:
-              prefix = 'th'
-          }
-
-          const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-          copyright.innerHTML = day + prefix + ' ' + months[month] + ' ' + year;
-        })
-      })();
-    </script>
 
 
 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.0.0/swiper-bundle.min.js" integrity="sha512-YmW5V9HDaGHx0Aao1SNObo0PHtU64Au8L59yLQlYo+6R8wOqVyo0AO5vm93A/vgOeHBWEsNbsyoXiBy3wz3z2Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+      <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+      <script>
+
+        var options = {
+          strings: ["Creating digital masterpieces with a dash of awesomeness...", "Epic Web Designs: Unleashing the Dark Knight of Creativity...", "Transforming Ideas into Inspired Digital Marvels","Crafting Digital Signals for the Online World"],
+          typeSpeed: 45,  // Typing speed in milliseconds
+          backSpeed: 20,  // Backspacing speed in milliseconds
+          loop: true,     // Loop the animation
+          showCursor: false,
+        };
+        
+        var typed = new Typed("#typed1", options);
+      </script>
+
+
+      <script>
+        (function () {
+          window.addEventListener('load', function () {
+            const date = new Date();
+            const copyright = document.getElementById('copy');
+
+            const year = date.getFullYear();
+            const day = date.getDate();
+            const month = date.getMonth();
+
+            let prefix;
+
+            switch (day) {
+              case 1, 21, 31:
+                prefix = 'st';
+                break;
+              
+              case 2, 22:
+                prefix = 'nd';
+                break;
+              
+              case 3, 23:
+                prefix = 'rd';
+                break;
+
+              default:
+                prefix = 'th'
+            }
+
+            const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            copyright.innerHTML = day + prefix + ' ' + months[month] + ' ' + year;
+          })
+        })();
+      </script>
 
 
 </body>

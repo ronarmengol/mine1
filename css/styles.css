@@ -1,3 +1,14 @@
+:root {
+  --green: #00e676;
+  --green: rgb(0, 230, 118);
+
+  --yellow:#fdc609;
+  --yellow:rgb(253, 198, 9);
+  
+}
+
+
+
 body::-webkit-scrollbar {
   width: 20px;
 }
@@ -17,9 +28,6 @@ body::-webkit-scrollbar-thumb:hover {
   background: #01579b;
 }
 
-:root {
-  --dark-blue: #1a237e;
-}
 
 * {
   margin: 0;
@@ -39,59 +47,71 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
+  font-family: 'Montserrat', sans-serif;
   user-select: none;
 
 }
 
-.fancy.appear {
-  animation: appear 3s linear forwards;
-}
-
-@keyframes appear {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-.slide-in-right.fancy {
-  animation: slide-in-right 1s linear both;
-}
-
-@keyframes slide-in-right {
-  0% {
-    transform: translateX(200px);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
 
 .index__hero {
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
-  background-color: #000;
-
-}
-
-.index__hero > img {
-  width: 50%;
-  filter: brightness(0.5);
-  -webkit-filter: brightness(0.5);
+  column-gap: 50px;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/batman-1_1024.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  padding: 30px 0;
 }
 
 .index__hero > div {
-  flex: 1 1 45%;
+  color: white;
 }
 
+.index__hero h1 {
+  font-weight: 600;
+  font-size: 4rem;
+  max-width: 400px;
+  /* text-align: center; */
+}
+
+.index__hero h2 {
+  font-weight: 400;
+  font-size: 1.6rem;
+  max-width: 400px;
+  color: #00e676;
+  height: 100px;
+}
+
+.index__hero img {
+  animation: glow 2s ease-in-out infinite;
+  -webkit-animation: glow 2s ease-in-out infinite;
+  width: 94%;
+}
+
+@keyframes glow {
+  0%, 100% {
+    filter: brightness(1);
+    -webkit-filter: brightness(1);
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+}
+  50% {
+    filter: brightness(1.3);
+    -webkit-filter: brightness(1.3);
+    transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
+}
+}
