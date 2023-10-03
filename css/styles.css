@@ -80,7 +80,6 @@ header {
   height: 100vh;
   width: 100%;
   position: relative;
-  /* background: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,40 +87,6 @@ header {
 
 }
 
-/* header > picture {
-      width: 100%;   
-      height: 100%;
-      position: absolute;
-      top: 0;
-      opacity: 1;
-      z-index: -1;
-  
-  } */
-header>video {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  object-position: center center;
-  position: absolute;
-  top: 0;
-  /* z-index: -1; */
-  opacity: 0.5;
-}
-
-
-/* width: 100%;   
-      height: 100%;
-      position: absolute;
-      top: 0;
-      opacity: 1;
-      z-index: -1; */
-
-
-/* header > picture > img {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-    } */
 #logo {
   height: 60%;
   fill: transparent;
@@ -353,46 +318,6 @@ section.lion h2 {
   }
 }
 
-section.inspired-intro {
-  background-color: #000;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  overflow-x: hidden;
-
-}
-
-section.inspired-intro>canvas {
-  position: absolute;
-  top: 0;
-}
-
-section.inspired-intro h2 {
-  font-size: 5rem;
-  color: #fff;
-  z-index: 10;
-}
-
-section.inspired {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  background-color: black;
-  overflow: hidden;
-}
-
-section.inspired>h2 {
-  z-index: 10;
-  color: #fff;
-  position: absolute;
-  top: 0%;
-  left: 50%;
-  transform: translate(-50%, 0);
-
-}
 
 .man-img {
   width: 100%;
@@ -497,13 +422,6 @@ section.intro2>aside>svg {
   transform: translate(-50%, -50%) scaleX(-1);
 }
 
-/* section.intro2 video {
-      max-width: 600px;
-      width: 100%;
-      height: auto;
-   
-    
-  } */
 
 section.intro2 h4 {
   font-size: 1.5rem;
@@ -1546,12 +1464,7 @@ section.website+h3 {
   text-align: center;
 }
 
-.section7 video {
-  max-width: 400px;
-  width: 100%;
-  display: block;
-  margin: 1rem auto;
-}
+
 
 .section8 .developer {
   display: flex;
@@ -1671,10 +1584,6 @@ section.website+h3 {
   position: relative;
 }
 
-.performance>.seo>video {
-  position: relative;
-  width: 100%;
-}
 
 .performance>.seo>h2 {
   font-size: clamp(1.5rem, 5vw, 4rem);
@@ -1754,17 +1663,6 @@ footer {
   height: 80vh;
 }
 
-footer video {
-  height: 100%;
-  position: absolute;
-  width: 100%;
-  object-fit: cover;
-  object-position: center center;
-  top: 0;
-  z-index: -1;
-  opacity: 1;
-
-}
 
 footer>div {
   display: block;
