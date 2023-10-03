@@ -113,5 +113,19 @@ body {
     -moz-transform: translateY(-5px);
     -ms-transform: translateY(-5px);
     -o-transform: translateY(-5px);
+  }
 }
+
+footer {
+  background-color: #333;
+  height: 150px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  text-align: center;
+  font-size: 1.3rem;
 }
