@@ -4,7 +4,9 @@
 
   --yellow:#fdc609;
   --yellow:rgb(253, 198, 9);
+
   
+  --blue:rgb(0, 170, 255);
 }
 
 
@@ -55,7 +57,7 @@ body {
 
 
 .index__hero {
-  height: 100vh;
+  min-height: 120vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -85,7 +87,8 @@ body {
   font-weight: 400;
   font-size: 1.6rem;
   max-width: 400px;
-  color: #00e676;
+  /* color: #00e676; */
+  color: var(--blue);
   height: 100px;
 }
 
@@ -116,6 +119,46 @@ body {
   }
 }
 
+.index__designer {
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.index__designer_container {
+  max-width: 270px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  /* overflow: hidden; */
+}
+
+.index__designer_square {
+  width: 25px;
+  height: 25px;
+  background-color: rgb(0, 170, 255);
+  /* margin: 1px; */
+}
+
+.index__designer h2 {
+  position: absolute;
+  text-align: center;
+  left: 48%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  letter-spacing: 1px;
+  font-size: 3.1rem;
+  font-weight: 500;
+  color: #ccc;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
 .index__online {
   background-color: #0d0f11;
   width: 100%;
@@ -138,9 +181,60 @@ body {
   font-size: 1.5rem;
 }
 
-.index__online h3 {
-  color: #ccc;
+.index__online_wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 50px;
+  margin-top: 30px;
+  row-gap: 50px;
 }
+
+.index__online_card {
+  flex: 0 0 300px;
+  background-color: rgba(255,255,255,0.2);
+  height: 300px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.index__online_card > h3 {
+  color: #ccc;
+  /* color: var(--blue); */
+  color: black;
+  background-color: var(--blue);
+  margin-top: 30px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.index__online_card > div > p {
+  color: #ccc;
+  padding: 20px;
+}
+
+.index__online_btn {
+  position: absolute;
+  text-decoration: none;
+  color: white;
+  left: 20px;
+  bottom: 20px;
+  border: 2px solid var(--blue);
+  padding: 5px 20px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+
 
 .index__about {
   background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/city-1.jpeg);

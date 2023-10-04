@@ -42,9 +42,9 @@
 
 
 
-    <meta property="og:title" content="how to make a website" />
+    <meta property="og:title" content="website designer" />
     <meta property="og:url" content="https://ronarmengol1.netlify.app/index.html" />
-    <!-- <meta property="og:image" content="https://ronarmengol1.netlify.app/assets/img/lion-face3.webp" /> -->
+    <meta property="og:image" content="https://ronarmengol1.netlify.app/images/batman-1_1024.jpg" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content="website info" />
     
@@ -58,6 +58,8 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     
     
     
@@ -87,11 +89,19 @@
         <h2 id="typed1"></h2>
       </div>
       <div>
-        <img src="images/holographic_display.png" alt="">
+        <img src="images/holographic_display.png" alt="holographic_display">
       </div>
     </header>
 
     <main>
+
+      <div class="index__designer">
+        <div class="index__designer_container">
+          <h2>Web <br/>
+            Designer <span class="none">seo web developer Africa Zambia design</span></h2>
+      </div>
+      </div>  
+
 
       <div class="index__online">
         <div>
@@ -100,13 +110,25 @@
         <h2>Get online</h2>
         <div class="index__online_wrapper">
           <div class="index__online_card">
-            <h3>Build</h3>
+            <h3 data-aos="slide-down">Build</h3>
+            <div>
+              <p data-aos="zoom-in" data-aos-delay="300">Plan, and design the website you want</p>
+            </div>
+            <a data-aos="slide-up" class="index__online_btn" href="#">learn more</a>
           </div>
           <div class="index__online_card">
-            <h3>Connect</h3>
+            <h3 data-aos="slide-down">Connect</h3>
+            <div>
+              <p data-aos="zoom-in" data-aos-delay="300">Transfer your finished design to a server and domain name</p>
+            </div>
+            <a data-aos="slide-up" class="index__online_btn" href="#">learn more</a>
           </div>
           <div class="index__online_card">
-            <h3>SEO</h3>
+            <h3 data-aos="slide-down">SEO</h3>
+            <div>
+              <p data-aos="zoom-in">Search Engine Optimization. Make your site be discoverable.</p>
+            </div>
+            <a data-aos="slide-up" class="index__online_btn" href="#">learn more</a>
           </div>
         </div>
       </div>
@@ -131,8 +153,56 @@
       
 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+    <script>
 
+      const container = document.querySelector('.index__designer_container');
+      for (let i = 0; i < 70; i++) {
+          let square = document.createElement('div');
+          square.classList.add('index__designer_square');
+          container.appendChild(square);
+
+          
+      }
+
+      let t1 = anime.timeline ({
+          duration: 750,
+          loop: true,
+          direction: 'alternate'
+      });
+
+      t1.add ({
+          targets: '.index__designer_square',
+          translateX: anime.stagger(10,{grid:[10,7], from: 'center', axis:'x'}),
+          translateY: anime.stagger(1,{grid:[10,7], from: 'center', axis:'y'}),
+          rotateZ: anime.stagger([0, 180],{grid:[10,7], from: 'center', axis:'x'}),
+          borderRadius: 0.5,
+          scale: 0.5,
+          // backgroundColor: '#ff0000',
+          delay: anime.stagger(200,{grid:[10,7], from:'center'}),
+          easing: 'easeInOutQuad'
+      }).add ({
+          targets: '.index__designer_square',
+          translateX: anime.stagger(15,{grid:[10,7], from: 'center', axis:'x'}),
+          translateY: anime.stagger(5,{grid:[10,7], from: 'center', axis:'y'}),
+          rotateZ: anime.stagger([180, 360],{grid:[10,7], from: 'center', axis:'x'}),
+          scale: 0.1,
+          delay: anime.stagger(500,{grid:[10,7], from:'center'}),
+          easing: 'easeInOutQuad'
+      })
+      // .add ({
+      //     targets: '.index__designer_square',
+      //     translateX: anime.stagger(15,{grid:[10,7], from: 'center', axis:'x'}),
+      //     translateY: anime.stagger(5,{grid:[10,7], from: 'center', axis:'y'}),
+      //     rotateZ: anime.stagger([360, 540],{grid:[10,7], from: 'center', axis:'x'}),
+      //     scale: 0.5,
+      //     backgroundColor: '#00ff00',
+
+      //     delay: anime.stagger(500,{grid:[10,7], from:'center'}),
+      //     easing: 'easeInOutQuad'
+      // })
+  </script>
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.0.0/swiper-bundle.min.js" integrity="sha512-YmW5V9HDaGHx0Aao1SNObo0PHtU64Au8L59yLQlYo+6R8wOqVyo0AO5vm93A/vgOeHBWEsNbsyoXiBy3wz3z2Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
@@ -151,6 +221,31 @@
         var typed = new Typed("#typed1", options);
       </script>
 
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+// Global settings:
+disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+initClassName: 'aos-init', // class applied after initialization
+animatedClassName: 'aos-animate', // class applied on animation
+useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+
+// Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+offset: 120, // offset (in px) from the original trigger point
+delay: 0, // values from 0 to 3000, with step 50ms
+duration: 400, // values from 0 to 3000, with step 50ms
+easing: 'ease', // default easing for AOS animations
+once: false, // whether animation should happen only once - while scrolling down
+mirror: false, // whether elements should animate out while scrolling past them
+anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+});
+</script>
 
       <script>
         (function () {
