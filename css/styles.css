@@ -243,7 +243,21 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.index__about_block {
+  width: 300px;
+  height: 500px;
+  background-color: var(--blue);
+}
+
+.index__about_wrapper {
+  color: white;
+}
+
 
 .index__footer {
   background-color: #0d0f11;
