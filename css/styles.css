@@ -16,16 +16,16 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px grey;
   border-radius: 10px;
-  background-color: #e1f5fe;
+  background-color: #7e878c;
 }
 
 body::-webkit-scrollbar-thumb {
-  background: #4fc3f7;
+  background: #383837;
   border-radius: 10px;
 }
 
 body::-webkit-scrollbar-thumb:hover {
-  background: #01579b;
+  background: #010305;
 }
 
 
@@ -116,16 +116,51 @@ body {
   }
 }
 
-footer {
-  background-color: #333;
+.index__service {
+  background-color: #0d0f11;
+  width: 100%;
+  /* height: 300px; */
+  position: relative;
+  padding: 20px 0 50px;
+}
+
+.index__service_giphy {
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin: auto;
+}
+
+.index__service h2 {
+  color: #ccc;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.index__service h3 {
+  color: #ccc;
+}
+
+.index__about {
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/city-1.jpeg);
+  width: 100%;
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.index__footer {
+  background-color: #0d0f11;
   height: 150px;
-  color: #fff;
+  color: #ccc;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-footer p {
+.index__footer p {
   text-align: center;
   font-size: 1.3rem;
 }
