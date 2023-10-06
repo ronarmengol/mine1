@@ -236,7 +236,7 @@ body {
   width: 100%;
   /* height: 300px; */
   position: relative;
-  padding: 20px 0 100px;
+  padding: 20px 0 150px;
 }
 
 .index__online_giphy {
@@ -309,8 +309,8 @@ body {
 .index__online_svg {
   position: absolute;
   bottom: 0px;
-  width: 100px;
-  height: 60px;
+  width: 200px;
+  height: 120px;
   left: 50%;
   transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
