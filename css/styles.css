@@ -344,8 +344,59 @@ body {
   max-width: 500px;
   /* height: 50%; */
   object-fit: cover;
+}
+
+.index__quote1 {
+  background-color: #010305;
+  /* background-color: #052341; */
+  padding: 50px 20px;
+}
+
+.index__quote1_batwrap {
+  /*background-color: var(--blue);
+  */width: 100px;
+  height: 100px;
+  display: block;
+  margin: auto;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  position: relative;
+}
+
+.index__quote1_batwrap img {
+  width: 150px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.index__quote1 > p:nth-of-type(1) {
+  color: rgba(255, 255, 255, 0.496);
+  opacity: 0.3;
+  text-align: center;
+  font-size: 1.6rem;
+  max-width: 500px;
+  display: block;
+  margin: 10px auto 30px;
   
 }
+
+.index__quote1 > p:nth-of-type(2) {
+  color: rgba(255, 255, 255, 0.307);
+  color: rgba(0, 170, 255,0.4);
+  text-align: center;
+  font-size: 1.6rem;
+
+}
+
 
 
 
