@@ -2,12 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://ronarmengol1.netlify.app/</loc>
-    <lastmod>2023-10-04</lastmod>
+    <lastmod>2023-10-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
       <image:image>
         <image:loc>https://ronarmengol1.netlify.app/images/holographic_display.png</image:loc>
-        <image:title></image:title>
+        <image:title>holographic_display</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>https://ronarmengol1.netlify.app/images/animated_ball.gif</image:loc>
+        <image:title>animated abstract shifting ball</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>https://ronarmengol1.netlify.app/images/batman-2.png</image:loc>
+        <image:title>batman in about page</image:title>
       </image:image>
   </url>
 </urlset>
