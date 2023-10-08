@@ -66,7 +66,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     
     
-    <link rel="stylesheet" href="css/styles.css?v=1.07">
+    <link rel="stylesheet" href="css/styles.css?v=1.08">
 
 
 
@@ -148,6 +148,11 @@
       </div>  
 
 
+      <audio id="myAudio" autoplay src="soundtrack.mp3" type="audio/mp3" onended="stopAudio()">
+    </audio>
+
+
+
 
       <div class="index__potential">
         <div class="index__potential_wrapper">
@@ -204,8 +209,8 @@
 
 
       <div class="index__about">
-        <h2 data-aos="slide-down" data-aos-duration="3000">ABOUT</h2>
-        <h3>STANDING OUT</h3>
+        <h2 data-aos="slide-down" data-aos-duration="3000">GO</h2>
+        <h3>STAND OUT</h3>
         <div class="index__about_block"></div>
         <img data-aos="slide-right" data-aos-duration="2000" class="index__about_img" src="images/batman-2.png" alt="batman in about page" loading="lazy">
       </div>
@@ -222,8 +227,17 @@
 
       <div class="index__batmobile">
         <div>
-          <img src="images/bat_mobile-1.jpg" alt="bat mobile great images and content">
+          <img data-aos="zoom-in" src="images/bat_mobile-1.jpg" alt="bat mobile great images and content">
         </div>
+      </div>
+
+
+      <div class="index__quote1">
+        <div data-aos="slide-down" class="index__quote1_batwrap">
+          <img src="images/bat_logo.png" alt="bat logo"loading="lazy"> 
+        </div>
+        <p data-aos="zoom-in" data-aos-duration="900">I have one power. I never give up.</p>
+        <p data-aos="slide-up">B.</p>
       </div>
 
     </main>
@@ -237,7 +251,20 @@
       </div>
     </footer>
       
-
+    <script>
+      
+      window.addEventListener('scroll', () => {
+        
+        const audio = document.getElementById('myAudio');
+          audio.play();
+          
+          function stopAudio() {
+            audio.pause();
+            audio.currentTime = 0;
+          }
+          
+        })
+    </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
