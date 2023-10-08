@@ -464,7 +464,17 @@ body {
   color: rgba(0, 170, 255,0.4);
   text-align: center;
   font-size: 1.6rem;
+}
 
+
+.index__batmobile {
+  background-color: #010305;
+}
+
+.index__batmobile img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
 }
 
 
