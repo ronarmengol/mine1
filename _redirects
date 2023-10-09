@@ -1,0 +1,5 @@
+# Redirect non-www to www
+http://ronarmengol1.netlify.app/* https://www.ronarmengol1.netlify.app/:splat 301!
+
+# Redirect www to non-www
+http://www.ronarmengol1.netlify.app/* https://ronarmengol1.netlify.app/:splat 301!
