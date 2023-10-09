@@ -74,11 +74,14 @@ body {
   position: relative;
 }
 
-.index__hero > div {
-  color: white;
+.index__hero_text {
+  position: absolute;
+  color: rgba(0,0,0,0.01);
 }
 
+
 .index__hero h1 {
+  color: white;
   font-weight: 600;
   font-size: 4rem;
   font-size: clamp(3rem, 2.6552rem + 1.3793vw, 4rem);
@@ -160,7 +163,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
+
+.index__designer_text {
+  position: absolute;
+}
+
+
 .index__designer_container {
   max-width: 270px;
   margin: auto;
