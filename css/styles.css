@@ -487,8 +487,107 @@ body {
   object-fit: cover;
 }
 
+.index__benefits {
+  background-color: #0d0f11;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(../images/city-3.jpg);
+  width: 100%;
+  min-height:100vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  padding: 100px 0 180px;
+  position: relative;
+}
+
+.index__benefits_giphy {
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin: auto;
+}
+
+.index__benefits h2 {
+  color: #ccc;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.index__benefits_wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 50px;
+  margin: 30px auto 0;
+  row-gap: 50px;
+  max-width: 1200px;
+}
+
+.index__benefits_card {
+  flex: 0 0 300px;
+  background-color: rgba(255,255,255,0.2);
+  height: 300px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.index__benefits_card > h3 {
+  color: #ccc;
+  /* color: var(--blue); */
+  color: black;
+  background-color: var(--blue);
+  margin-top: 30px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.index__benefits_card > div > p {
+  color: #ccc;
+  padding: 20px;
+}
+
+.index__benefits_btn {
+  position: absolute;
+  text-decoration: none;
+  color: white;
+  left: 20px;
+  bottom: 20px;
+  border: 2px solid var(--blue);
+  padding: 5px 20px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.index__benefits_svg {
+  position: absolute;
+  bottom: 0px;
+  width: 200px;
+  height: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
 
 
+#logo2 path:nth-of-type(1) {
+  stroke-dasharray: 345px;
+  stroke-dashoffset: 345px;
+  animation: anim 3s ease forwards infinite;
+  -webkit-animation: anim 3s ease forwards infinite;
+}
 
 .index__footer {
   background-color: #0d0f11;
