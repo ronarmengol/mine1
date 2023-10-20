@@ -2,8 +2,11 @@
   from = "http://ronarmengol1.netlify.app/*"
   to = "https://www.ronarmengol1.netlify.app/:splat"
   status = 301
+  force = true
 
 [[redirects]]
   from = "http://www.ronarmengol1.netlify.app/*"
   to = "https://ronarmengol1.netlify.app/:splat"
   status = 301
+  force = true
+
