@@ -56,7 +56,6 @@ body {
 
 }
 
-
 .index__hero {
   min-height: 120vh;
   width: 100%;
@@ -97,6 +96,7 @@ body {
   color: var(--blue);
   height: 100px;
 }
+
 
 .index__hero img {
   animation: glow 2s ease-in-out infinite;
@@ -632,12 +632,6 @@ body {
   position: relative;
 }
 
-.seo__hero_text {
-  position: absolute;
-  color: rgba(0,0,0,0.01);
-}
-
-
 .seo__hero h1 {
   color: white;
   font-weight: 600;
@@ -647,11 +641,56 @@ body {
   /* text-align: center; */
 }
 
-.seo__hero h2 {
+.seo__main {
+  background-color: #0d0f11;
+  padding: 20px;
+}
+
+.seo__main h2 {
+  color: white;
+  font-size: 3rem;
   font-weight: 400;
-  font-size: 1.6rem;
-  max-width: 400px;
-  /* color: #00e676; */
+  max-width: 700px;
+}
+
+.seo__main h3 {
+  color: rgb(182, 182, 182);
+  font-size: 1.9rem;
+  font-weight: 400;
+  max-width: 700px;
+  margin-bottom: 10px;
+}
+.seo__main p {
+  max-width: 700px;
+  font-size: 1.4rem;
+  padding-bottom: 50px;
+  line-height: 35px;
+  color: #61a2c3;
+}
+
+.seo__btn a {
+  text-decoration: none;
   color: var(--blue);
-  height: 100px;
+  padding: 20px;
+  font-size: 1.5rem;
+}
+
+.seo__intro {
+  padding: 100px 20px;
+}
+
+.seo__basics {
+  padding: 100px 20px;
+}
+
+.seo__technical {
+  padding: 100px 20px;
+}
+
+.seo__local {
+  padding: 100px 20px;
+}
+
+.seo__content {
+  padding: 100px 20px;
 }
