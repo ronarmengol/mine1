@@ -76,6 +76,8 @@ body {
 .index__hero_text {
   position: absolute;
   color: rgba(0,0,0,0.01);
+  font-size: 1.2rem;
+  /* color: white; */
 }
 
 
