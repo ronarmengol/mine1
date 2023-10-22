@@ -736,8 +736,8 @@ body {
   width: 100%;
   max-width: 600px;
   opacity: 0.8;
-  filter: brightness(0.8) contrast(1);
-  -webkit-filter: brightness(0.8) contrast(1);
+  filter: brightness(0.8) contrast(1.4);
+  -webkit-filter: brightness(0.8) contrast(1.4);
 }
 
 .index__footer {
