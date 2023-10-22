@@ -71,8 +71,8 @@
  
     
 
-    <link rel="preload" as="style" href="css/styles.css?v=1.10">
-    <link rel="stylesheet" href="css/styles.css?v=1.10">
+    <link rel="preload" as="style" href="css/styles.css?v=1.11">
+    <link rel="stylesheet" href="css/styles.css?v=1.11">
 
 
 
@@ -327,27 +327,32 @@
       
 
       <div class="index__contact">
+      
         <div class="index__contact_wrapper">
           <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
             <input name="bot-field" style="display: none;">
             <div>
-              <label for="">Name</label>
-              <input type="text" name="name">
+              <label data-aos="slide-down" for="name">Name</label>
+              <input data-aos="slide-right" id="name" type="text" name="name">
             </div>
             <div>
-              <label for="">Email</label>
-              <input type="text" name="email">
+              <label data-aos="slide-down" for="email">Email</label>
+              <input data-aos="slide-right" id="email" type="text" name="email">
             </div>
             <div>
-              <label for="">Message</label>
-              <textarea name="message"></textarea>
+              <label data-aos="slide-down" for="message">Message</label>
+              <textarea data-aos="slide-right" id="message" name="message" rows="6" cols="30"></textarea>
             </div>
 
             <div>
-              <button type="submit">Send</button>
+              <button data-aos="slide-up"type="submit">Get My Free consulatation</button>
             </div>
           </form>
         </div>
+        <div>
+          <img data-aos="slide-left" data-aos-duration="1000" src="images/bat_jet-1.png" alt="bat mobile" loading="lazy">
+        </div>
+       
       </div>
 
     </main>
@@ -355,7 +360,7 @@
     <footer class="index__footer">
       <div>
         <p class="none">Web designer design developer Kitwe Zambia Africa</p>
-        <p>Ron Armengol &copy <span id="copy"></span></p>
+        <p data-aos="slide-right">Ron Armengol &copy <span id="copy"></span></p>
         <p>0966 232544</p>
         <p>Kitwe Zambia</p>
       </div>
