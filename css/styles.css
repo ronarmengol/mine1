@@ -744,8 +744,8 @@ body {
 
 @keyframes batjet {
   0%, 100% {
-    filter: brightness(0.8);
-    -webkit-filter: brightness(0.8);
+    filter: brightness(0.8) contrast(1);
+    -webkit-filter: brightness(0.8) contrast(1);
     transform: translateY(10px) rotate(-4deg);
     -webkit-transform: translateY(10px) rotate(-4deg);
     -moz-transform: translateY(10px) rotate(-4deg);
@@ -753,8 +753,8 @@ body {
     -o-transform: translateY(10px) rotate(-4deg);
 }
   50% {
-    filter: brightness(1);
-    -webkit-filter: brightness(1);
+    filter: brightness(1) contrast(1.6);
+    -webkit-filter: brightness(1) contrast(1.6);
     transform: translateY(-45px) rotate(5deg) scale(1.05);
     -webkit-transform: translateY(-45px) rotate(5deg) scale(1.05);
     -moz-transform: translateY(-45px) rotate(5deg) scale(1.05);
