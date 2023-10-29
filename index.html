@@ -269,7 +269,7 @@
 
       <div class="index__batmobile">
         <div>
-          <img data-aos="zoom-in" src="images/bat_mobile-1.jpg" alt="bat mobile great images and content" loading="lazy">
+          <img data-aos="zoom-in" src="images/bat_mobile-1.jpg" alt="bat mobile great images and content">
         </div>
       </div>
 
@@ -364,7 +364,8 @@
           </form>
         </div>
         <div data-aos="slide-left" data-aos-duration="1000" >
-          <img src="images/bat_jet-1.png" alt="bat mobile" loading="lazy">
+          <img src="" alt="bat mobile" id="image1">
+
         </div>
        
       </div>
@@ -395,6 +396,13 @@
           
         })
     </script> -->
+
+    <script>
+      window.addEventListener('load', () => {
+        const image1 = document.getElementById('image1');
+        image1.src = "images/bat_jet-1.png";
+      })
+    </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
