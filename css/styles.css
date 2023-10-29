@@ -62,7 +62,8 @@ body {
   display: flex;
   justify-content: center;
   column-gap: 50px;
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/batman-1_1024.jpg);
+  background-color: black;
+  /* background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/batman-1_1024.jpg); */
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;

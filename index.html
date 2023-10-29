@@ -144,7 +144,7 @@
 
   </head>
   <body>
-    <header class="index__hero">
+    <header class="index__hero" id="bg_hero">
 
 
 
@@ -154,7 +154,7 @@
         <h2 id="typed1"></h2>
       </div>
       <div>
-        <img src="images/holographic_display.png" alt="holographic_display">
+        <img src="" alt="holographic_display" id="image4">
       </div>
       <div class="index__hero_text">
         <h3>We are your gateway to cutting-edge web solutions in Zambia! As the premier web design agency, we're on a mission to elevate your online presence and redefine digital excellence.</h3>
@@ -410,6 +410,17 @@
         // giphy ball index_batmobile
         const image3 = document.getElementById('image3');
         image3.src = "images/animated_ball.gif";
+
+        // giphy ball index_batmobile
+        const image4 = document.getElementById('image4');
+        image4.src = "images/holographic_display.png";
+
+
+
+        // BG
+        // hero
+        const bg_hero = document.getElementById('bg_hero');
+        bg_hero.style.backgroundImage = 'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(images/batman-1_1024.jpg)';
       })
     </script>
 
