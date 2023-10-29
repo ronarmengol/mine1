@@ -69,7 +69,10 @@
 
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
  
+
     
+    
+    <link rel="preload" as="image" href="images/batman-1_1024.jpg">
 
     <link rel="preload" as="style" href="css/styles.css?v=1.15">
     <link rel="stylesheet" href="css/styles.css?v=1.15">
@@ -266,7 +269,7 @@
 
       <div class="index__batmobile">
         <div>
-          <img data-aos="zoom-in" src="images/bat_mobile-1.jpg" alt="bat mobile great images and content">
+          <img data-aos="zoom-in" src="images/bat_mobile-1.jpg" alt="bat mobile great images and content" loading="lazy">
         </div>
       </div>
 
@@ -447,6 +450,7 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.0.0/swiper-bundle.min.js" integrity="sha512-YmW5V9HDaGHx0Aao1SNObo0PHtU64Au8L59yLQlYo+6R8wOqVyo0AO5vm93A/vgOeHBWEsNbsyoXiBy3wz3z2Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
       <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
       <script>
 
@@ -461,7 +465,6 @@
         var typed = new Typed("#typed1", options);
       </script>
 
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
   AOS.init({
 // Global settings:
@@ -483,44 +486,44 @@ easing: 'ease', // default easing for AOS animations
 once: false, // whether animation should happen only once - while scrolling down
 mirror: false, // whether elements should animate out while scrolling past them
 anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
-
 });
 </script>
 
-      <script>
-        (function () {
-          window.addEventListener('load', function () {
-            const date = new Date();
-            const copyright = document.getElementById('copy');
 
-            const year = date.getFullYear();
-            const day = date.getDate();
-            const month = date.getMonth();
+<script>
+  (function () {
+    window.addEventListener('load', function () {
+      const date = new Date();
+      const copyright = document.getElementById('copy');
 
-            let prefix;
+      const year = date.getFullYear();
+      const day = date.getDate();
+      const month = date.getMonth();
 
-            switch (day) {
-              case 1, 21, 31:
-                prefix = 'st';
-                break;
-              
-              case 2, 22:
-                prefix = 'nd';
-                break;
-              
-              case 3, 23:
-                prefix = 'rd';
-                break;
+      let prefix;
 
-              default:
-                prefix = 'th'
-            }
+      switch (day) {
+        case 1, 21, 31:
+          prefix = 'st';
+          break;
+        
+        case 2, 22:
+          prefix = 'nd';
+          break;
+        
+        case 3, 23:
+          prefix = 'rd';
+          break;
 
-            const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-            copyright.innerHTML = day + prefix + ' ' + months[month] + ' ' + year;
-          })
-        })();
-      </script>
+        default:
+          prefix = 'th'
+      }
+
+      const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+      copyright.innerHTML = day + prefix + ' ' + months[month] + ' ' + year;
+    })
+  })();
+</script>
 
 
 </body>
