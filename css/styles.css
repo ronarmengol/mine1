@@ -593,6 +593,26 @@ body {
 }
 
 
+.index__tools {
+  background-color: #0d0f11;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(../images/batman-3.jpg);
+  width: 100%;
+  min-height:100vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 20%;
+  padding: 100px 0 180px;
+  position: relative;
+}
+
+.index__tools h2 {
+  color: #ccc;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
 
 .index__contact {
   background-color: #0d0f11;
