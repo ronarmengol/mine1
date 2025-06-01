@@ -1,8 +1,6 @@
-# www.robotstxt.org/
+User-agent: *
 
-# Allow crawling of all content
+Allow : /
+ 
 
 Sitemap: https://ronarmengol1.netlify.app/sitemap.xml
-
-User-agent: *
-Disallow:
