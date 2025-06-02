@@ -569,23 +569,29 @@ anchorPlacement: 'top-bottom', // defines which position of the element regardin
       const day = date.getDate();
       const month = date.getMonth();
 
-      let prefix;
+      let prefix = "";
+
+      console.log(day);
 
       switch (day) {
-        case 1, 21, 31:
+        case 1:
+        case 21:
+        case 31:
           prefix = 'st';
           break;
-        
-        case 2, 22:
+
+        case 2:
+        case 22:
           prefix = 'nd';
           break;
-        
-        case 3, 23:
+
+        case 3:
+        case 23:
           prefix = 'rd';
           break;
 
         default:
-          prefix = 'th'
+          prefix = 'th';
       }
 
       const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
