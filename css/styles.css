@@ -62,6 +62,9 @@ body {
     transition: width 0.2s, height 0.2s, background-color 0.2s;
 }
 
+body:hover .cursor-outline {
+    /* Only show if mouse present - handled via CSS media hover usually, but basic here */
+}
 
 /* Typography Utility */
 h1, h2, h3 {
@@ -313,63 +316,22 @@ ul {
     gap: 20px;
 }
 
-/* Hero Visual - Code Window */
+/* Hero Visual - 3D Container */
 .hero__visual {
     position: relative;
     display: flex;
     justify-content: center;
     perspective: 1000px;
+    height: 100%;
+    min-height: 500px;
 }
 
-.code-window {
+#hero-3d-container {
     width: 100%;
-    max-width: 500px;
-    background: rgba(20, 20, 25, 0.9);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-    transform: rotateY(-5deg) rotateX(5deg);
-    transition: transform 0.3s ease;
-    backdrop-filter: blur(10px);
+    height: 100%;
+    position: relative;
+    z-index: 10;
 }
-
-.code-window:hover {
-    transform: rotateY(0deg) rotateX(0deg);
-}
-
-.code-header {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 20px;
-}
-
-.code-header .dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-}
-
-.dot.red { background: #ff5f56; }
-.dot.yellow { background: #ffbd2e; }
-.dot.green { background: #27c93f; }
-
-.code-content {
-    font-family: 'Fira Code', monospace;
-    font-size: 0.9rem;
-    line-height: 1.6;
-    color: #e2e8f0;
-}
-
-.keyword { color: #c678dd; }
-.var { color: #e5c07b; }
-.type { color: #e06c75; }
-.string { color: #98c379; }
-.func { color: #61afef; }
-.bool { color: #d19a66; }
-.arg { color: #d19a66; }
-.indent { margin-left: 20px; }
-.indent-2 { margin-left: 40px; }
 
 /* Scroll Indicator */
 .scroll-indicator {
