@@ -62,9 +62,6 @@ body {
     transition: width 0.2s, height 0.2s, background-color 0.2s;
 }
 
-body:hover .cursor-outline {
-    /* Only show if mouse present - handled via CSS media hover usually, but basic here */
-}
 
 /* Typography Utility */
 h1, h2, h3 {
