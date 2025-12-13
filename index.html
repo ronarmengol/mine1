@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +23,7 @@
     <title>Ron Armengol | Professional Web Design & Development</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/ico" href="./favicon.ico" />
 
@@ -84,16 +85,19 @@
 </head>
 <body>
 
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
     <header class="header">
         <div class="container header__container">
             <div class="header__logo">
-                <a href="#">Ron Armengol</a>
+                <a href="#">Ron Armengol<span class="dot">.</span></a>
             </div>
             <nav class="header__nav">
                 <ul>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact" class="btn btn--primary">Get in Touch</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#contact" class="btn btn--primary">Let's Talk</a></li>
                 </ul>
             </nav>
         </div>
@@ -102,38 +106,84 @@
     <main>
         <!-- Hero Section -->
         <section class="hero">
+            <div class="hero__bg">
+                <div class="hero__blob hero__blob--1"></div>
+                <div class="hero__blob hero__blob--2"></div>
+                <div class="hero__blob hero__blob--3"></div>
+            </div>
             <div class="container hero__container">
-                <div class="hero__content">
-                    <h1>Build Your Digital Presence</h1>
-                    <p>We create professional websites and applications that attract customers and grow your business.</p>
-                    <a href="#contact" class="btn btn--primary">Start Your Project</a>
+                <div class="hero__content hidden-content">
+                    <h1 class="hero__title">
+                        <span class="d-block">We Build</span>
+                        <span class="gradient-text">Digital Experiences</span>
+                    </h1>
+                    <p class="hero__subtitle">Transforming ideas into professional, high-converting websites and applications for modern businesses.</p>
+                    <div class="hero__actions">
+                        <a href="#contact" class="btn btn--primary btn--lg">Start Project</a>
+                        <a href="#services" class="btn btn--outline btn--lg">Explore Services</a>
+                    </div>
                 </div>
+                <div class="hero__visual hidden-visual">
+                   <div class="code-window">
+                       <div class="code-header">
+                           <span class="dot red"></span>
+                           <span class="dot yellow"></span>
+                           <span class="dot green"></span>
+                       </div>
+                       <div class="code-content">
+                           <div class="line"><span class="keyword">const</span> <span class="var">digitalSuccess</span> = <span class="keyword">new</span> <span class="type">Promise</span>((<span class="arg">resolve</span>) => {</div>
+                           <div class="line indent">  <span class="func">buildWebsite</span>({</div>
+                           <div class="line indent-2">    design: <span class="string">'Modern'</span>,</div>
+                           <div class="line indent-2">    performance: <span class="string">'High'</span>,</div>
+                           <div class="line indent-2">    seo: <span class="bool">true</span></div>
+                           <div class="line indent">  });</div>
+                           <div class="line indent">  <span class="func">resolve</span>(<span class="string">'Growth'</span>);</div>
+                           <div class="line">});</div>
+                       </div>
+                   </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span></span>
             </div>
         </section>
 
         <!-- Services Section -->
         <section id="services" class="section services">
             <div class="container">
-                <div class="section__header">
-                    <h2>Our Services</h2>
-                    <p>Comprehensive digital solutions tailored to your needs.</p>
+                <div class="section__header hidden-content">
+                    <span class="section__tag">What We Do</span>
+                    <h2>Comprehensive Digital Solutions</h2>
+                    <p>Tailored strategies to elevate your brand in the digital landscape.</p>
                 </div>
                 <div class="services__grid">
-                    <div class="card">
+                    <div class="card hidden-card">
+                        <div class="card__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        </div>
                         <h3>Web Design</h3>
-                        <p>Custom, responsive designs that look great on all devices and represent your brand perfectly.</p>
+                        <p>Immersive, responsive designs that captivate your audience on any device. We blend aesthetics with functionality.</p>
                     </div>
-                    <div class="card">
+                    <div class="card hidden-card">
+                        <div class="card__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                        </div>
                         <h3>App Development</h3>
-                        <p>Functional and user-friendly web applications to streamline your business processes.</p>
+                        <p>Robust web applications built for scalability and performance. Streamline your business operations with custom tools.</p>
                     </div>
-                    <div class="card">
+                    <div class="card hidden-card">
+                        <div class="card__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                        </div>
                         <h3>SEO & Optimization</h3>
-                        <p>Improve your visibility on search engines and reach more potential customers.</p>
+                        <p>Data-driven strategies to boost your search rankings. We help potential customers find you when it matters most.</p>
                     </div>
-                    <div class="card">
+                    <div class="card hidden-card">
+                        <div class="card__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                        </div>
                         <h3>Maintenance</h3>
-                        <p>Ongoing support and updates to keep your website secure and running smoothly.</p>
+                        <p>Proactive support ensuring your digital assets remain secure, fast, and up-to-date with the latest web standards.</p>
                     </div>
                 </div>
             </div>
@@ -142,15 +192,39 @@
         <!-- About Section -->
         <section id="about" class="section about">
             <div class="container about__container">
-                <div class="about__content">
-                    <h2>Why Choose Us?</h2>
-                    <p>We combine technical expertise with creative design to deliver results. Based in Kitwe, Zambia, we understand the local market while delivering world-class quality. We are dedicated to helping your business succeed online.</p>
+                <div class="about__content hidden-content">
+                    <span class="section__tag">Why Choose Us</span>
+                    <h2>Bridging Creativity & Technology</h2>
+                    <p>Based in Kitwe, Zambia, we bring world-class digital expertise to the local market. We don't just build websites; we engineer digital experiences that drive growth.</p>
                     <ul class="about__list">
-                        <li>Professional & Reliable</li>
-                        <li>Custom Tailored Solutions</li>
-                        <li>Focus on ROI</li>
-                        <li>Excellent Support</li>
+                        <li>
+                            <span class="check">✓</span>
+                            <span>Professional & Reliable</span>
+                        </li>
+                        <li>
+                            <span class="check">✓</span>
+                            <span>Custom Tailored Solutions</span>
+                        </li>
+                        <li>
+                            <span class="check">✓</span>
+                            <span>Focus on ROI</span>
+                        </li>
+                        <li>
+                            <span class="check">✓</span>
+                            <span>Excellent Support</span>
+                        </li>
                     </ul>
+                </div>
+                <div class="about__visual hidden-visual">
+                    <div class="stat-card stat-1">
+                        <span class="number">100%</span>
+                        <span class="label">Client Satisfaction</span>
+                    </div>
+                    <div class="stat-card stat-2">
+                        <span class="number">24/7</span>
+                        <span class="label">Support</span>
+                    </div>
+                    <div class="abstract-shape"></div>
                 </div>
             </div>
         </section>
@@ -158,32 +232,43 @@
         <!-- Contact Section -->
         <section id="contact" class="section contact">
             <div class="container">
-                <div class="section__header">
-                    <h2>Contact Us</h2>
-                    <p>Ready to start your project? Get in touch today for a free consultation.</p>
+                <div class="section__header hidden-content">
+                    <span class="section__tag">Get In Touch</span>
+                    <h2>Ready to Scale?</h2>
+                    <p>Start your project today. Get a free consultation.</p>
                 </div>
                 <div class="contact__wrapper">
-                    <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="contact__form">
-                        <input name="bot-field" style="display: none;">
+                    <form name="contact" method="POST" data-netlify="true" class="contact__form hidden-card">
                         <div class="form__group">
                             <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required>
                         </div>
                         <div class="form__group">
                             <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
+                            <input type="email" id="email" name="email" placeholder="john@example.com" required>
                         </div>
                         <div class="form__group">
                             <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
                         </div>
-                        <button type="submit" class="btn btn--primary">Send Message</button>
+                        <button type="submit" class="btn btn--primary btn--full">Send Message</button>
                     </form>
-                    <div class="contact__info">
-                        <h3>Contact Information</h3>
-                        <p><strong>Email:</strong> ronarmengol1977@gmail.com</p>
-                        <p><strong>Phone:</strong> +260 966 232 544</p>
-                        <p><strong>Location:</strong> Kitwe, Zambia</p>
+                    <div class="contact__info hidden-card" style="transition-delay: 0.2s;">
+                        <div class="info-item">
+                            <h3>Email Us</h3>
+                            <p><a href="mailto:ronarmengol1977@gmail.com">ronarmengol1977@gmail.com</a></p>
+                        </div>
+                        <div class="info-item">
+                            <h3>Call Us</h3>
+                            <p><a href="tel:+260966232544">+260 966 232 544</a></p>
+                        </div>
+                        <div class="info-item">
+                            <h3>Location</h3>
+                            <p>Kitwe, Zambia</p>
+                        </div>
+                        <div class="social-links">
+                             <!-- Add social icons here if available -->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -196,6 +281,7 @@
         </div>
     </footer>
 
+    <script src="js/main.js"></script>
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
