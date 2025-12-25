@@ -50,10 +50,95 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(el);
   });
 
-  // --- Hero Code Typing Effect (Simple simulation) ---
-  // This just adds a blinking cursor class or simple aesthetic
-  // The CSS animation handles most, but we could add dynamic typing if needed.
-  // For now, the CSS 'float' and 3D transforms handle the visual interest.
+  // --- 3D Tilt Effect for Cards ---
+  class TiltEffect {
+    constructor(cards) {
+      this.cards = cards;
+      this.init();
+    }
+
+    init() {
+      this.cards.forEach((card) => {
+        card.addEventListener("mousemove", (e) => this.handleMove(e, card));
+        card.addEventListener("mouseleave", () => this.handleLeave(card));
+        card.addEventListener("mouseenter", () => this.handleEnter(card));
+      });
+    }
+
+    handleMove(e, card) {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+
+      const rotateX = ((y - centerY) / centerY) * -10; // Max rotation deg
+      const rotateY = ((x - centerX) / centerX) * 10;
+
+      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+    }
+
+    handleLeave(card) {
+      card.style.transform = `perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)`;
+      card.style.transition = "transform 0.5s ease";
+    }
+
+    handleEnter(card) {
+      card.style.transition = "none";
+    }
+  }
+
+  const cards = document.querySelectorAll(".card");
+  new TiltEffect(cards);
+
+  // --- Typing Text Effect ---
+  const typingTextElement = document.getElementById("typing-text");
+  if (typingTextElement) {
+    const texts = ["Websites & Apps", "Custom Software", "Mobile Solutions", "Digital Growth"];
+    let textIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typeSpeed = 100;
+
+    function type() {
+      const currentText = texts[textIndex];
+
+      if (isDeleting) {
+        typingTextElement.textContent = currentText.substring(0, charIndex - 1);
+        charIndex--;
+        typeSpeed = 50;
+      } else {
+        typingTextElement.textContent = currentText.substring(0, charIndex + 1);
+        charIndex++;
+        typeSpeed = 100;
+      }
+
+      if (!isDeleting && charIndex === currentText.length) {
+        isDeleting = true;
+        typeSpeed = 2000; // Pause at end
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        textIndex = (textIndex + 1) % texts.length;
+        typeSpeed = 500; // Pause before new word
+      }
+
+      setTimeout(type, typeSpeed);
+    }
+
+    // Start typing
+    setTimeout(type, 1000);
+  }
+
+  // --- Blob Parallax ---
+  const heroBg = document.querySelector(".hero__bg");
+  if(heroBg) {
+      window.addEventListener("mousemove", (e) => {
+          const moveX = (e.clientX - window.innerWidth / 2) * 0.02;
+          const moveY = (e.clientY - window.innerHeight / 2) * 0.02;
+          heroBg.style.transform = `translate(${moveX}px, ${moveY}px)`;
+      });
+  }
 
   // --- Header Scroll Effect ---
   const header = document.querySelector(".header");
