@@ -688,3 +688,25 @@ ul {
         display: none; /* For now, simple hidden nav on mobile as per previous step */
     }
 }
+/* Typing Effect Layout Fix */
+.typing-wrapper {
+    display: inline-grid;
+    vertical-align: top;
+    justify-items: start; /* Default: Align to start (left) */
+}
+
+.typing-wrapper > * {
+    grid-area: 1 / 1; /* Stack all children in the same cell */
+}
+
+.invisible-placeholder {
+    visibility: hidden;
+    pointer-events: none;
+    user-select: none;
+}
+
+@media (max-width: 900px) {
+    .typing-wrapper {
+        justify-items: center; /* Center align on mobile */
+    }
+}
