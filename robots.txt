@@ -1,6 +1,6 @@
 User-agent: *
 
-Allow : /
+Allow: /
  
 
 Sitemap: https://ronarmengol1.netlify.app/sitemap.xml
