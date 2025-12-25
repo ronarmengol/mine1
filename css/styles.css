@@ -409,6 +409,7 @@ ul {
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
     overflow: hidden;
+    transform-style: preserve-3d;
 }
 
 .card:hover {
@@ -416,6 +417,10 @@ ul {
     transform: translateY(-10px);
     border-color: rgba(255,255,255,0.1);
     box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.card__icon, .card h3, .card p {
+    transform: translateZ(20px);
 }
 
 .card__icon {
