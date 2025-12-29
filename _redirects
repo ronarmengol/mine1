@@ -1,5 +1,3 @@
-# Redirect non-www to www
-http://ronarmengol1.netlify.app/* https://www.ronarmengol1.netlify.app/:splat 301!
-
-# Redirect www to non-www
-http://www.ronarmengol1.netlify.app/* https://ronarmengol1.netlify.app/:splat 301!
+# Redirects are handled by netlify.toml, but we can keep non-conflicting ones here if needed.
+# Currently netlify.toml handles www -> non-www and http -> https.
+# We will leave this empty or add specific page redirects if needed later.
