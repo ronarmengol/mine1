@@ -1,37 +1,61 @@
 const canvas = document.getElementById("hero-canvas");
 const context = canvas.getContext("2d");
 
-const frameCount = 240;
-const currentFrame = (index) =>
-  `./sequence/ezgif-frame-${index.toString().padStart(3, "0")}.jpg`;
+// --- Optimization Strategy ---
+// Using 80 frames instead of 240 (Loading every 3rd frame from sequence)
+// This reduces initial network payload from ~9MB to ~3MB while preserving fluidity.
+const totalFramesAvailable = 240;
+const frameStep = 3;
+const frameCount = Math.floor(totalFramesAvailable / frameStep);
+
+const currentFrame = (index) => {
+  // Map index to the actual filename (e.g., 1 -> 001, 2 -> 004, 3 -> 007)
+  const actualIndex = index * frameStep + 1;
+  const fileNameIndex = Math.min(totalFramesAvailable, actualIndex);
+  return `./sequence/ezgif-frame-${fileNameIndex.toString().padStart(3, "0")}.jpg`;
+};
 
 const images = [];
-let imagesLoaded = 0;
 let lastFrameIndex = -1;
 
-// Preload images
-for (let i = 1; i <= frameCount; i++) {
-  const img = new Image();
-  img.src = currentFrame(i);
-  img.onload = () => {
-    imagesLoaded++;
-    if (imagesLoaded === 1) {
-      render(0);
-    }
-  };
-  images.push(img);
+// --- Priority Loading ---
+// Load the very first frame immediately to prevent blank hero
+const firstImage = new Image();
+firstImage.src = currentFrame(0);
+firstImage.onload = () => {
+  images[0] = firstImage;
+  render(0);
+  // Once the first frame is ready, start loading others in chunks
+  startBackgroundLoading();
+};
+
+function startBackgroundLoading() {
+  // Load remaining frames with a slight stagger to not choke the browser bandwidth
+  for (let i = 1; i < frameCount; i++) {
+    const img = new Image();
+    img.src = currentFrame(i);
+    img.onload = () => {
+      images[i] = img;
+    };
+  }
 }
 
 function render(index) {
-  if (images[index] && images[index].complete) {
-    const img = images[index];
+  const img = images[index];
+  if (img && img.complete) {
+    // Sync canvas size
+    const width = window.innerWidth;
+    const height = window.innerHeight;
 
-    // Canvas sizing to fill screen
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    if (canvas.width !== width || canvas.height !== height) {
+      canvas.width = width;
+      canvas.height = height;
+    }
 
-    // Object-fit: cover implementation for canvas
-    const imgRatio = 1158 / 770; // Original aspect ratio of the images
+    // Object-fit: cover implementation
+    const imgWidth = 1158;
+    const imgHeight = 770;
+    const imgRatio = imgWidth / imgHeight;
     const canvasRatio = canvas.width / canvas.height;
 
     let drawWidth, drawHeight, offsetX, offsetY;
@@ -53,8 +77,11 @@ function render(index) {
   }
 }
 
+// --- Scroll Logic ---
 window.addEventListener("scroll", () => {
   const scrollSection = document.getElementById("hero-scroll");
+  if (!scrollSection) return;
+
   const scrollTop = window.scrollY;
   const maxScrollTop = scrollSection.scrollHeight - window.innerHeight;
 
@@ -73,46 +100,43 @@ window.addEventListener("scroll", () => {
         // Dynamic content fade for Main Hero Content
         const heroContent = document.querySelector(".hero__content");
         if (heroContent) {
-          const opacity = Math.max(0, 1 - scrollFraction * 4); // Fade out faster
+          const opacity = Math.max(0, 1 - scrollFraction * 4);
           heroContent.style.opacity = opacity;
           heroContent.style.transform = `translateY(${-scrollFraction * 50}px)`;
         }
 
-        // Logic for Interactive Steps
-        const step1 = document.querySelector(".hero__step--1");
-        const step2 = document.querySelector(".hero__step--2");
-
-        // Step 1: Appears around 50% (0.5)
-        // Range: 0.35 to 0.65
-        if (step1) {
-          let s1Opacity = 0;
-          if (scrollFraction > 0.35 && scrollFraction < 0.65) {
-            // simple peak curve logic
-            s1Opacity = 1 - Math.abs(scrollFraction - 0.5) * 6.66; // 1 at 0.5, 0 at 0.35/0.65
-          }
-          step1.style.opacity = Math.max(0, s1Opacity);
-          step1.style.transform = `translate(-50%, calc(-50% - ${(scrollFraction - 0.5) * 100}px))`;
-        }
-
-        // Step 2: Appears around 80% (0.8)
-        // Range: 0.65 to 0.95
-        if (step2) {
-          let s2Opacity = 0;
-          if (scrollFraction > 0.65 && scrollFraction < 0.95) {
-            s2Opacity = 1 - Math.abs(scrollFraction - 0.8) * 6.66;
-          }
-          step2.style.opacity = Math.max(0, s2Opacity);
-          step2.style.transform = `translate(-50%, calc(-50% - ${(scrollFraction - 0.8) * 100}px))`;
-        }
+        // Interactive Step Revealers
+        updateSteps(scrollFraction);
       });
     }
   }
 });
 
-window.addEventListener("resize", () => {
-  if (lastFrameIndex >= 0) {
-    render(lastFrameIndex);
-  } else {
-    render(0);
+function updateSteps(progress) {
+  const step1 = document.querySelector(".hero__step--1");
+  const step2 = document.querySelector(".hero__step--2");
+
+  // Step 1: 0.35 to 0.65
+  if (step1) {
+    let s1Opacity = 0;
+    if (progress > 0.35 && progress < 0.65) {
+      s1Opacity = 1 - Math.abs(progress - 0.5) * 6.66;
+    }
+    step1.style.opacity = Math.max(0, s1Opacity);
+    step1.style.transform = `translate(-50%, calc(-50% - ${(progress - 0.5) * 100}px))`;
   }
+
+  // Step 2: 0.65 to 0.95
+  if (step2) {
+    let s2Opacity = 0;
+    if (progress > 0.65 && progress < 0.95) {
+      s2Opacity = 1 - Math.abs(progress - 0.8) * 6.66;
+    }
+    step2.style.opacity = Math.max(0, s2Opacity);
+    step2.style.transform = `translate(-50%, calc(-50% - ${(progress - 0.8) * 100}px))`;
+  }
+}
+
+window.addEventListener("resize", () => {
+  render(Math.max(0, lastFrameIndex));
 });
