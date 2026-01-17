@@ -1,12 +1,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
 <url>
 <loc>https://ronarmengol1.netlify.app/</loc>
 <lastmod>2025-06-04</lastmod>
 <priority>1.00</priority>
 </url>
 <url>
-<loc>https://ronarmengol1.netlify.app/article-seo</loc>
+<loc>https://ronarmengol1.netlify.app/services/web-design.html</loc>
+<lastmod>2025-06-04</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://ronarmengol1.netlify.app/services/app-development.html</loc>
+<lastmod>2025-06-04</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://ronarmengol1.netlify.app/services/seo-optimization.html</loc>
 <lastmod>2025-06-04</lastmod>
 <priority>0.80</priority>
 </url>

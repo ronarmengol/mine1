@@ -495,6 +495,7 @@ ul {
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
     overflow: hidden;
+    transform-style: preserve-3d;
 }
 
 .card:hover {
@@ -502,6 +503,10 @@ ul {
     transform: translateY(-10px);
     border-color: rgba(255, 255, 255, 0.1);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.card__icon, .card h3, .card p {
+    transform: translateZ(20px);
 }
 
 .card__icon {
@@ -782,5 +787,27 @@ ul {
     .header__nav {
         display: none;
         /* For now, simple hidden nav on mobile as per previous step */
+    }
+}
+/* Typing Effect Layout Fix */
+.typing-wrapper {
+    display: inline-grid;
+    vertical-align: top;
+    justify-items: start; /* Default: Align to start (left) */
+}
+
+.typing-wrapper > * {
+    grid-area: 1 / 1; /* Stack all children in the same cell */
+}
+
+.invisible-placeholder {
+    visibility: hidden;
+    pointer-events: none;
+    user-select: none;
+}
+
+@media (max-width: 900px) {
+    .typing-wrapper {
+        justify-items: center; /* Center align on mobile */
     }
 }
